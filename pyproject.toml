@@ -3,7 +3,7 @@ name = "python-voice-assistant"
 version = "0.1.0"
 description = ""
 license = "GPL-3.0-only"
-authors = ["YisusChrist <alejandro.gonzalezm02@estudiante.uam.es>"]
+authors = ["YisusChrist <agelrenorenardo@gmail.com>"]
 readme = "README.md"
 repository = "https://github.com/yisuschrist/python-voice-assistant"
 
