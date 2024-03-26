@@ -1,3 +1,5 @@
+import sys
+
 import pyttsx3  # pip install pyttsx3
 import speech_recognition as sr  # pip install SpeechRecognition
 
@@ -40,7 +42,11 @@ class Engine:
         with sr.Microphone() as source:
             print("Listening ...")
             r.pause_threshold = 1
-            audio = r.listen(source, phrase_time_limit=5)
+            try:
+                audio = r.listen(source, phrase_time_limit=5)
+            except KeyboardInterrupt:
+                self.speak("Goodbye")
+                sys.exit(1)
         try:
             print("Processing...")
             query = r.recognize_google(audio, language="en-in")
