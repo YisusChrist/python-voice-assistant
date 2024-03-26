@@ -4,6 +4,7 @@ import sys
 
 import psutil  # for cpu usage
 from newsapi import NewsApiClient  # pip install newsapi-python
+from pyowm import OWM  # Import the OWM module
 
 from .engine import Engine
 
@@ -11,9 +12,11 @@ from .engine import Engine
 class CommandHandler:
     def __init__(self):
         self.engine = Engine()
+        self.owm = OWM(os.getenv("OWM_API_KEY"))  # Initialize OWM with your API key
         self.commands = {
             "time": self.time,
             "date": self.date,
+            "weather": self.weather_report,
             "greeting": self.greeting,
             "news": self.news,
             "clear": self.clear,
@@ -21,6 +24,7 @@ class CommandHandler:
             "battery": self.battery,
             "exit": self.exit,
             "where are the turtles": self.the_office,
+            "al bundy": self.married_with_children,
         }
 
     def time(self):
@@ -80,9 +84,30 @@ class CommandHandler:
             self.engine.speak(f'{x} {y["description"]}')
         self.engine.speak("You're now fully updated on the news")
 
+    def weather_report(self):
+        self.engine.speak("Please specify a city")
+        city = self.engine.mic_to_text()
+
+        mgr = self.owm.weather_manager()
+        observation = mgr.weather_at_place(city)
+        w = observation.weather
+        temperature = w.temperature("celsius")["temp"]
+        status = w.detailed_status
+
+        print(
+            f"The temperature in {city} is {temperature} degrees celsius with {status}"
+        )
+        self.engine.speak(
+            f"The temperature in {city} is {temperature} degrees celsius with {status}"
+        )
+
     def the_office(self):
         # Say something typical that Michael Scott would say
         self.engine.speak("That's what she said")
+
+    def married_with_children(self):
+        # Say something typical that Al Bundy would say
+        self.engine.speak("I hate my life")
 
     def clear(self):
         os.system("cls")
