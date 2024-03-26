@@ -1,18 +1,10 @@
 import sys
 
 from dotenv import load_dotenv  # pip install python-dotenv
+from openai import OpenAI  # pip install openai
+from openai.types.chat.chat_completion import ChatCompletion
 
 from .commands import *
-
-
-# def ListenInBg():
-#     r = sr.Recognizer()
-#     r.listen_in_background(sr.Microphone(),callback,phrase_time_limit=2)
-
-#     try:
-#         print("You said " + recognizer.recognize_google(audio,language='en-in'))  # received audio data, now need to recognize it
-#     except LookupError:
-#         print("Oops! Didn't catch that")
 
 
 def load_environment_variables():
@@ -33,18 +25,41 @@ def read_command(command_handler: CommandHandler, query: str):
     """
     Read the command from the user.
     """
-    query_parts = " ".join([p.lower() for p in query.split()])
+    query_parts = query.lower()
     for command, function in command_handler.commands.items():
         if command in query_parts or query_parts in command:
             try:
                 function()
-                return
+                return True
             except Exception as e:
                 print(e)
                 pass
 
-    else:
-        print("Command not recognized. Please try again.")
+    print("Command not recognized. Please try again.")
+    return False
+
+
+def openai_call(transcript: str):
+    client = OpenAI(
+        # This is the default and can be omitted
+        api_key=os.getenv("OPENAI_API_KEY"),
+    )
+
+    # Create a list of messages with the user's input
+    messages: list[dict[str, str]] = [
+        {"role": "user", "content": transcript},
+    ]
+    print("Transcript:", transcript)
+
+    # Make the API call for gpt AI
+    completion: ChatCompletion = client.chat.completions.create(
+        model="gpt-3.5-turbo", messages=messages
+    )
+    response = completion.choices[0].message["content"]
+    # Print the assistant's response
+    print("Assistant:", response)
+
+    return response
 
 
 def main():
@@ -59,7 +74,10 @@ def main():
             print("Empty query")
             continue
 
-        read_command(command_handler, query)
+        result = read_command(command_handler, query)
+        if not result:
+            openai_response = openai_call(query)
+            command_handler.engine.speak(openai_response)
 
 
 if __name__ == "__main__":
