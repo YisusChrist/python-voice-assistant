@@ -5,14 +5,20 @@ import sys
 import psutil  # for cpu usage
 from newsapi import NewsApiClient  # pip install newsapi-python
 from pyowm import OWM  # Import the OWM module
+from rich import print
 
 from .engine import Engine
 
 
 class CommandHandler:
     def __init__(self):
+        api_key = os.getenv("OWM_API_KEY")
+        if not api_key:
+            print("Environment variable 'OWM_API_KEY' not found")
+            sys.exit(1)
+
         self.engine = Engine()
-        self.owm = OWM(os.getenv("OWM_API_KEY"))  # Initialize OWM with your API key
+        self.owm = OWM(api_key)
         self.commands = {
             "time": self.time,
             "date": self.date,
@@ -69,6 +75,10 @@ class CommandHandler:
 
     def news(self):
         api_key = os.getenv("NEWS_API_KEY")
+        if not api_key:
+            print("Environment variable 'NEWS_API_KEY' not found")
+            sys.exit(1)
+
         newsapi = NewsApiClient(api_key=api_key)
 
         self.engine.speak("Please specify a topic")

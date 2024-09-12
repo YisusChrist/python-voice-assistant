@@ -40,6 +40,11 @@ def read_command(command_handler: CommandHandler, query: str):
 
 
 def openai_call(transcript: str):
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        print("Environment variable 'OPENAI_API_KEY' not found")
+        return
+    
     client = OpenAI(
         # This is the default and can be omitted
         api_key=os.getenv("OPENAI_API_KEY"),
