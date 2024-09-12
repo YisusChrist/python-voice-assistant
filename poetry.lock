@@ -3408,13 +3408,13 @@ files = [
 
 [[package]]
 name = "speechrecognition"
-version = "3.10.1"
+version = "3.10.4"
 description = "Library for performing speech recognition, with support for several engines and APIs, online and offline."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "SpeechRecognition-3.10.1-py2.py3-none-any.whl", hash = "sha256:69898b2b0bbd5bc65647c5ef833fe318ad74f02e8a6af5c9fd671933083660bc"},
-    {file = "SpeechRecognition-3.10.1.tar.gz", hash = "sha256:718731886b7836e20a06b9a2c6cace12a9e130971bb6af1b1dd130b22bad9f82"},
+    {file = "SpeechRecognition-3.10.4-py2.py3-none-any.whl", hash = "sha256:723b8155692a8ed11a30013f15f89a3e57c5dc8bc73c8cb024bf9bd14c21fba5"},
+    {file = "speechrecognition-3.10.4.tar.gz", hash = "sha256:986bafcf61f14625c2f3cea6a471838edd379ed68aeed7b8f3c0fb41e21f1125"},
 ]
 
 [package.dependencies]
@@ -3422,7 +3422,9 @@ requests = ">=2.26.0"
 typing-extensions = "*"
 
 [package.extras]
+dev = ["flake8", "rstcheck"]
 whisper-api = ["openai"]
+whisper-local = ["openai-whisper", "soundfile"]
 
 [[package]]
 name = "tqdm"
