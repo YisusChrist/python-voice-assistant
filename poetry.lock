@@ -3499,13 +3499,13 @@ cli = ["click (>=5.0)"]
 
 [[package]]
 name = "pyttsx3"
-version = "2.91"
+version = "2.97"
 description = "Text to Speech (TTS) library for Python 3. Works without internet connection or delay. Supports multiple TTS engines, including Sapi5, nsss, and espeak."
 optional = false
 python-versions = "*"
 files = [
-    {file = "pyttsx3-2.91-py3-none-any.whl", hash = "sha256:8f19217c4d65a46870e0b82f2e7eb1570ec2b2ca80517fbeee095e54f76f73e2"},
-    {file = "pyttsx3-2.91.tar.gz", hash = "sha256:8e31e521f0154a0c598f5b74b3ac070f1cb46954058bd6d09a3ba171511f0460"},
+    {file = "pyttsx3-2.97-py3-none-any.whl", hash = "sha256:18ce30643b67bad1d97361fbb3a3c7ca8fcc750ed8e98ac226ebb623b01e4b0f"},
+    {file = "pyttsx3-2.97.tar.gz", hash = "sha256:72ab49365a79d4b8305f8a3225ead69da29fb2793320cdffc42c5a13e39d5eab"},
 ]
 
 [package.dependencies]
