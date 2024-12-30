@@ -3838,13 +3838,13 @@ files = [
 
 [[package]]
 name = "speechrecognition"
-version = "3.12.0"
+version = "3.13.0"
 description = "Library for performing speech recognition, with support for several engines and APIs, online and offline."
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "SpeechRecognition-3.12.0-py3-none-any.whl", hash = "sha256:99fc41b12d7b456fce4aebe9bf2b8858ac9c179e1313110005762c67dec24ebb"},
-    {file = "speechrecognition-3.12.0.tar.gz", hash = "sha256:248b4c585d11b9168708439f026fb2c0fef0d2a5152d18ee8aaf06abffc82032"},
+    {file = "SpeechRecognition-3.13.0-py3-none-any.whl", hash = "sha256:44ca68ffbc55910ec0d26f009632a67367e2c81934934babe52456a896e983e1"},
+    {file = "speechrecognition-3.13.0.tar.gz", hash = "sha256:fdf42f4ad3cc05df7dd4a651ae090f313e34a5f6389f09134594e4ada9d28b19"},
 ]
 
 [package.dependencies]
@@ -3855,7 +3855,8 @@ typing-extensions = "*"
 [package.extras]
 assemblyai = ["requests"]
 audio = ["PyAudio (>=0.2.11)"]
-dev = ["flake8", "pytest", "pytest-randomly", "respx", "rstcheck"]
+dev = ["pytest", "pytest-randomly", "respx"]
+google-cloud = ["google-cloud-speech"]
 groq = ["groq", "httpx (<0.28)"]
 openai = ["httpx (<0.28)", "openai"]
 pocketsphinx = ["pocketsphinx (<5)"]
