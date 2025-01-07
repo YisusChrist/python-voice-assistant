@@ -199,13 +199,13 @@ files = [
 
 [[package]]
 name = "comtypes"
-version = "1.4.8"
+version = "1.4.9"
 description = "Pure Python COM package"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "comtypes-1.4.8-py3-none-any.whl", hash = "sha256:773109b12aa0bec630d5b2272dd983cbaa25605a12fc1319f99730c9d0b72f79"},
-    {file = "comtypes-1.4.8.zip", hash = "sha256:bb2286cfb3b96f838307200a85b00b98e1bdebf1e58ec3c28b36b1ccfafac01f"},
+    {file = "comtypes-1.4.9-py3-none-any.whl", hash = "sha256:ee03793e293b2be3db3a30591af2c5b217c977b0115ab43d9dd68114335f371d"},
+    {file = "comtypes-1.4.9.zip", hash = "sha256:b93df9371193734b4a2b0ebe1bbd2e548f3cf79cf508dcfbd59cb6b9affd372f"},
 ]
 
 [[package]]
