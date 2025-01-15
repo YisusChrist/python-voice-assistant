@@ -3838,13 +3838,13 @@ files = [
 
 [[package]]
 name = "speechrecognition"
-version = "3.13.0"
+version = "3.14.0"
 description = "Library for performing speech recognition, with support for several engines and APIs, online and offline."
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "SpeechRecognition-3.13.0-py3-none-any.whl", hash = "sha256:44ca68ffbc55910ec0d26f009632a67367e2c81934934babe52456a896e983e1"},
-    {file = "speechrecognition-3.13.0.tar.gz", hash = "sha256:fdf42f4ad3cc05df7dd4a651ae090f313e34a5f6389f09134594e4ada9d28b19"},
+    {file = "SpeechRecognition-3.14.0-py3-none-any.whl", hash = "sha256:28303ae2b6abc13408963a91f838996f181f1c256936f94b8c021b51fcd4a3f5"},
+    {file = "speechrecognition-3.14.0.tar.gz", hash = "sha256:8f23d0125422fac358a05697ceffb5d7387a3f699fc2dcf829ee692fb15471c2"},
 ]
 
 [package.dependencies]
@@ -3855,7 +3855,8 @@ typing-extensions = "*"
 [package.extras]
 assemblyai = ["requests"]
 audio = ["PyAudio (>=0.2.11)"]
-dev = ["pytest", "pytest-randomly", "respx"]
+dev = ["numpy", "pytest", "pytest-randomly", "respx"]
+faster-whisper = ["faster-whisper"]
 google-cloud = ["google-cloud-speech"]
 groq = ["groq", "httpx (<0.28)"]
 openai = ["httpx (<0.28)", "openai"]
