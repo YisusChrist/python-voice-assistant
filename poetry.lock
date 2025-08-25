@@ -4264,18 +4264,18 @@ pyobjc-framework-Cocoa = ">=11.1"
 
 [[package]]
 name = "pyowm"
-version = "3.3.0"
+version = "3.4.0"
 description = "A Python wrapper around OpenWeatherMap web APIs"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "pyowm-3.3.0-py3-none-any.whl", hash = "sha256:86463108e7613171531ba306040b43c972b3fc0b0acf73b12c50910cdd2107ab"},
-    {file = "pyowm-3.3.0.tar.gz", hash = "sha256:8196f77c91eac680676ed5ee484aae8a165408055e3e2b28025cbf60b8681e03"},
+    {file = "pyowm-3.4.0-py3-none-any.whl", hash = "sha256:d0fdeeaba3ce7b1cb6ab52aa076fd63bd836f210e9b43ad49aa936b835effbd5"},
+    {file = "pyowm-3.4.0.tar.gz", hash = "sha256:e366b12d6ff4668f5f8e3ad85ad345b9d7048ea76479add2222385e9df85515e"},
 ]
 
 [package.dependencies]
-geojson = ">=2.3.0,<3"
+geojson = ">=2.3.0,<4"
 PySocks = ">=1.7.1,<2"
 requests = [
     {version = ">=2.20.0,<3"},
