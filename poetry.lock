@@ -192,15 +192,14 @@ files = [
 
 [[package]]
 name = "comtypes"
-version = "1.4.11"
+version = "1.4.12"
 description = "Pure Python COM package"
 optional = false
 python-versions = ">=3.8"
-groups = ["main"]
-markers = "platform_system == \"Windows\""
+groups = ["main", "dev"]
 files = [
-    {file = "comtypes-1.4.11-py3-none-any.whl", hash = "sha256:1760d5059ca7ca1d61b574c998378d879c271a86c41f88926619ea97497592bb"},
-    {file = "comtypes-1.4.11.zip", hash = "sha256:0a4259370ec48b685fe4483b0944ba1df0aa45163922073fe9b7df1d187db09e"},
+    {file = "comtypes-1.4.12-py3-none-any.whl", hash = "sha256:e0fa9cc19c489fa7feea4c1710f4575c717e2673edef5b99bf99efd507908e44"},
+    {file = "comtypes-1.4.12.zip", hash = "sha256:3ff06c442c2de8a2b25785407f244eb5b6f809d21cf068a855071ba80a76876f"},
 ]
 
 [[package]]
