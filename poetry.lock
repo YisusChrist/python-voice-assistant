@@ -4508,14 +4508,14 @@ files = [
 
 [[package]]
 name = "speechrecognition"
-version = "3.15.2"
+version = "3.16.0"
 description = "Library for performing speech recognition, with support for several engines and APIs, online and offline."
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "speechrecognition-3.15.2-py3-none-any.whl", hash = "sha256:5d4ef35baec50490d6d08978d05448312e451924bb00122e85e5995d0407d6b5"},
-    {file = "speechrecognition-3.15.2.tar.gz", hash = "sha256:b938395178f2138775e4bb553f92e2b629a64113dd7de3b2fd7d1d43ab689770"},
+    {file = "speechrecognition-3.16.0-py3-none-any.whl", hash = "sha256:045ad40fe255544aea7b1b6182f2b7ba4aa637286f5a1ddb04a75cc808df9718"},
+    {file = "speechrecognition-3.16.0.tar.gz", hash = "sha256:32100621e13ffa58df3c962f7c9e0f1f092be7be305fa5bd9579581d17b78191"},
 ]
 
 [package.dependencies]
@@ -4526,6 +4526,7 @@ typing-extensions = "*"
 [package.extras]
 assemblyai = ["requests"]
 audio = ["PyAudio (>=0.2.11)"]
+cohere-api = ["cohere (>=5.21.0)"]
 dev = ["mypy", "numpy", "pytest", "pytest-httpserver", "pytest-randomly", "respx", "types-requests"]
 faster-whisper = ["faster-whisper", "soundfile"]
 google-cloud = ["google-cloud-speech"]
