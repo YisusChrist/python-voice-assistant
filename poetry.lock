@@ -4514,14 +4514,14 @@ files = [
 
 [[package]]
 name = "speechrecognition"
-version = "3.16.0"
+version = "3.16.1"
 description = "Library for performing speech recognition, with support for several engines and APIs, online and offline."
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "speechrecognition-3.16.0-py3-none-any.whl", hash = "sha256:045ad40fe255544aea7b1b6182f2b7ba4aa637286f5a1ddb04a75cc808df9718"},
-    {file = "speechrecognition-3.16.0.tar.gz", hash = "sha256:32100621e13ffa58df3c962f7c9e0f1f092be7be305fa5bd9579581d17b78191"},
+    {file = "speechrecognition-3.16.1-py3-none-any.whl", hash = "sha256:b27ee50422ecee9f6837faeaa2d0937c6ea6d7e1b9dbc00a90ebc0f745cceda9"},
+    {file = "speechrecognition-3.16.1.tar.gz", hash = "sha256:6e0e5a326825de99c20da129fd5536bdae899faafa137bea905403c7c8dd47ec"},
 ]
 
 [package.dependencies]
