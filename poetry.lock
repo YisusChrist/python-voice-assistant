@@ -337,14 +337,14 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "idna"
-version = "3.17"
+version = "3.18"
 description = "Internationalized Domain Names in Applications (IDNA)"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "idna-3.17-py3-none-any.whl", hash = "sha256:466e48829084efe2548012b855df21540b96f2e20e51bd124c851536556a592c"},
-    {file = "idna-3.17.tar.gz", hash = "sha256:5eb0cb53bc467c12eadcf6de83163ad8527cec9416f44b9b61b19caedad2b87f"},
+    {file = "idna-3.18-py3-none-any.whl", hash = "sha256:7f952cbe720b688055e3f87de14f5c3e5fdaa8bc3928985c4077ca689de849a2"},
+    {file = "idna-3.18.tar.gz", hash = "sha256:ffb385a7e039654cef1ab9ef32c6fafe283c0c0467bba1d9029738ce4a14a848"},
 ]
 
 [package.extras]
@@ -779,12 +779,12 @@ version = "12.2"
 description = "Python<->ObjC Interoperability Module"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc-12.2-py3-none-any.whl", hash = "sha256:f3b0d4cdb7d0be242a37ff27c9f0b3ef182fe8ebdbac6ae0c40ef87539fe7d77"},
     {file = "pyobjc-12.2.tar.gz", hash = "sha256:7074dcb0999e611e456b12cf94b7289cf6327094359b2c21c5ae593048b909bf"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = "12.2"
@@ -959,7 +959,8 @@ version = "12.2"
 description = "Python<->ObjC Interoperability Module"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_core-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:45fffb2b8dc0ae4480386429bd1e7fa8aabeb2eec81816d6971b33936dfcfff8"},
     {file = "pyobjc_core-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:17b4e003af384d3086c2f39989a0b282c5755dd1066f331cf7c9fa65febe22ce"},
@@ -972,7 +973,6 @@ files = [
     {file = "pyobjc_core-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:ac952bac8057dd0b97ee7b311c39f97cad7430b7cfbd67ca0a30135a7d17d2ab"},
     {file = "pyobjc_core-12.2.tar.gz", hash = "sha256:51d7de4cfa32f508c6a7aac31f131b12d5e196a8dcf588e6e8d7e6337224f66d"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [[package]]
 name = "pyobjc-framework-accessibility"
@@ -980,7 +980,8 @@ version = "12.2"
 description = "Wrappers for the framework Accessibility on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_accessibility-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:bcb73e79f4e2740341e5bdb7b5112826fb9bfb2bd9e11c4c2f59f9bf94e7453c"},
     {file = "pyobjc_framework_accessibility-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:ca321d2d3c501a26cee32a3659167d5cf788e9f08fddf505a1ab80540b2223b9"},
@@ -993,7 +994,6 @@ files = [
     {file = "pyobjc_framework_accessibility-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:76495fbe29ad10051cfd66d1f9e54283a82b22e70b0a25ee6481f8f7e0de5b9d"},
     {file = "pyobjc_framework_accessibility-12.2.tar.gz", hash = "sha256:86f82cc21db65c73c72ae93b7536381f1e12a1c89d4c554a216217dacdf60bb3"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1006,12 +1006,12 @@ version = "12.2"
 description = "Wrappers for the framework Accounts on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_accounts-12.2-py2.py3-none-any.whl", hash = "sha256:a1638b7758e6371f59e7ea9f912922530062ce9640a0f1d1e66a0702bff7f8e3"},
     {file = "pyobjc_framework_accounts-12.2.tar.gz", hash = "sha256:823b61e3ed964efde365e6c83b605692f72cb7f7e0782dafea674f2de8e3f8ed"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1023,7 +1023,8 @@ version = "12.2"
 description = "Wrappers for the framework AddressBook on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_addressbook-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:267a4453bbe917791837ec8bdc6ba221a115c796cc0cc28a8b3be45542f2b8bf"},
     {file = "pyobjc_framework_addressbook-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:96b01e8119559662cd81ab22442d596361a90fce8194c174b793522c545fa05c"},
@@ -1036,7 +1037,6 @@ files = [
     {file = "pyobjc_framework_addressbook-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:b0b3c2e00500d4ee3ebb62df367473cc8c92b1ece7b4ad65384e1ac56d6a7c68"},
     {file = "pyobjc_framework_addressbook-12.2.tar.gz", hash = "sha256:5f763983c1c32e70f7b742e35a025530be4bf6742ff4ac98f71ab0bfeb5cf9bd"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1048,12 +1048,12 @@ version = "12.2"
 description = "Wrappers for the framework AdServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_adservices-12.2-py2.py3-none-any.whl", hash = "sha256:7c1b1f78689f66fa724c23fd20dac56e8ea3190e868d9859d08294a58e26cb33"},
     {file = "pyobjc_framework_adservices-12.2.tar.gz", hash = "sha256:77a3cf0acdf5e83c29c26be60a63e35a31ad5076ac60188a52268fe53de7cee0"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1065,12 +1065,12 @@ version = "12.2"
 description = "Wrappers for the framework AdSupport on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"18.0\""
 files = [
     {file = "pyobjc_framework_adsupport-12.2-py2.py3-none-any.whl", hash = "sha256:39ca7e3c336c32c5d9d5780eba7606f4d53034bb53bc7b55c8a5a2e430ad7c66"},
     {file = "pyobjc_framework_adsupport-12.2.tar.gz", hash = "sha256:fe8e730c102a6579fe905b20e497423a080fd1f6a75eabf7356d2394467f64a4"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"18.0\"", dev = "platform_release >= \"18.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1082,12 +1082,12 @@ version = "12.2"
 description = "Wrappers for the framework AppleScriptKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_applescriptkit-12.2-py2.py3-none-any.whl", hash = "sha256:4b2a2f02e159c3c13834c3a605c1445563592f41d57ef6cdca2bd39e6409270d"},
     {file = "pyobjc_framework_applescriptkit-12.2.tar.gz", hash = "sha256:1e1f91966b42f902d954a570a2aab8a4e24af465833525863e30c8a5b47ee4f1"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1099,12 +1099,12 @@ version = "12.2"
 description = "Wrappers for the framework AppleScriptObjC on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_applescriptobjc-12.2-py2.py3-none-any.whl", hash = "sha256:0a3019b16959dd8bef9fb581894901e89e027fa0b8b21b8515deda13a3cd9b34"},
     {file = "pyobjc_framework_applescriptobjc-12.2.tar.gz", hash = "sha256:118abccae98c0af67e7c850058e4651748256eba52da382a2cd58e0e7c74418e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1116,7 +1116,8 @@ version = "12.2"
 description = "Wrappers for the framework ApplicationServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_applicationservices-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:07433804aa59d2a870cf62e6556cb63bef6ef9dade51dbaef3580a1a0e276460"},
     {file = "pyobjc_framework_applicationservices-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:9eaa9fa92d4fa35b08c7612af321615cccdcf0dec26b04a92521153730144f5e"},
@@ -1129,7 +1130,6 @@ files = [
     {file = "pyobjc_framework_applicationservices-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:8e14e97fc6bbedc95479f7b408f00e3b4aaaafafc23f9e2a955210beca15b474"},
     {file = "pyobjc_framework_applicationservices-12.2.tar.gz", hash = "sha256:4f6c4027405f709872e5b098f3cd86961bdf262fb80679a548725a02171bb0cf"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1143,12 +1143,12 @@ version = "12.2"
 description = "Wrappers for the framework AppTrackingTransparency on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_apptrackingtransparency-12.2-py2.py3-none-any.whl", hash = "sha256:f0b51c30dc8c32882aa88e891ec13e52a0b339a3bb52ab7eed162a9640b76b4a"},
     {file = "pyobjc_framework_apptrackingtransparency-12.2.tar.gz", hash = "sha256:7887b9c574c8a4edafbf8e34649a77ea91aab93dcf92b22e272ab01341d9e404"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1160,12 +1160,12 @@ version = "12.2"
 description = "Wrappers for the framework ARKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"25.0\""
 files = [
     {file = "pyobjc_framework_arkit-12.2-py2.py3-none-any.whl", hash = "sha256:6a8065f5e49c6efddfa9250f14845b5a5fc0cada5444a87d1f96fcf72ac71f19"},
     {file = "pyobjc_framework_arkit-12.2.tar.gz", hash = "sha256:48f7241f07c03a5caad05b8998ee23210f9fd2395be69b635fdcd41d11329cf3"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"25.0\"", dev = "platform_release >= \"25.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1177,7 +1177,8 @@ version = "12.2"
 description = "Wrappers for the framework AudioVideoBridging on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_audiovideobridging-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:e5e84cc43c34ba843011834c2bee9a2d48f21a255bda656bc9059ce88892fce2"},
     {file = "pyobjc_framework_audiovideobridging-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:68f0a786474682fd4e203904dc364413a919e19a9ce8ca1e053a5a536288a298"},
@@ -1190,7 +1191,6 @@ files = [
     {file = "pyobjc_framework_audiovideobridging-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:b85588556c9987e64f458eb7beb99773f7b854a804ffe025c492f8eb04f996a6"},
     {file = "pyobjc_framework_audiovideobridging-12.2.tar.gz", hash = "sha256:7019abd29ab7b232618a5ab7135670e6f1e15744167b8d4f841133893914ebf5"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1202,7 +1202,8 @@ version = "12.2"
 description = "Wrappers for the framework AuthenticationServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_authenticationservices-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:fcd4f30529ff85696c80321edb13a73d8e9323527fe935aef89a6b9aa99bb6dd"},
     {file = "pyobjc_framework_authenticationservices-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:4d2efe165b7cc0da60a28d4e1e1acce6913ccb1547a03a1da30027f64e6bd347"},
@@ -1215,7 +1216,6 @@ files = [
     {file = "pyobjc_framework_authenticationservices-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:bab948aaec62be6351712c32c56647e678add6313d07c7cac3277c222ead5e65"},
     {file = "pyobjc_framework_authenticationservices-12.2.tar.gz", hash = "sha256:c99c11082d5ac6c454d729142709552b10e385d99e34d8e631bedca1886c8b78"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1227,7 +1227,8 @@ version = "12.2"
 description = "Wrappers for the framework AutomaticAssessmentConfiguration on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_automaticassessmentconfiguration-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:5b2b2a2f5dcb3d1158515eb8a91dab8feb323c674d77676a2554e80ef7285ffe"},
     {file = "pyobjc_framework_automaticassessmentconfiguration-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:c5b9d2490ee6849f4a92db6d2ca4a79a7a1ebbf8050287bd854e524982300b85"},
@@ -1240,7 +1241,6 @@ files = [
     {file = "pyobjc_framework_automaticassessmentconfiguration-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:793954d0a7b2d28fd21c509a897dbd78fa42433cf5f00c09091c143023659775"},
     {file = "pyobjc_framework_automaticassessmentconfiguration-12.2.tar.gz", hash = "sha256:dbd96b6085cc9da3f5115d418b2e052a5807a8964e49422c0d7bf7196499f78c"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1252,7 +1252,8 @@ version = "12.2"
 description = "Wrappers for the framework Automator on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_automator-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:7eb8e51ba9bb6b51d1e468016e536ef5247145dfaba20d4a682b15eb5cc86fd4"},
     {file = "pyobjc_framework_automator-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:7e7fb144f6adfaec353720d58f5aa8880a3c064d5c36d5042e816ac34f1d99f1"},
@@ -1265,7 +1266,6 @@ files = [
     {file = "pyobjc_framework_automator-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:86e9dfa9290909e999cd86686a4f7cf8f437a6c218d03dc244fea7b84cbd80b8"},
     {file = "pyobjc_framework_automator-12.2.tar.gz", hash = "sha256:bf38231f0ad38115473e853e6419c5d0511f4fe6dd904ea380160da91cf27bea"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1277,7 +1277,8 @@ version = "12.2"
 description = "Wrappers for the framework AVFoundation on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"11.0\""
 files = [
     {file = "pyobjc_framework_avfoundation-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:c71e09a7b8ff94c488086908c21e133d618139fbc40c8b366db6b2522290b276"},
     {file = "pyobjc_framework_avfoundation-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:f2d573dcd05591e77c320559c5f09c2b345893ff31902c4cb1baa5e69030575d"},
@@ -1290,7 +1291,6 @@ files = [
     {file = "pyobjc_framework_avfoundation-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:d60d7ee5935266907acb1a61c25a0d2750f9b1f4ffe4fa6c908440f003d1addf"},
     {file = "pyobjc_framework_avfoundation-12.2.tar.gz", hash = "sha256:d06443acf26f3f3e16e8a9bfad42db900af3b8c3ca34c5676343d2f8e001f56b"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"11.0\"", dev = "platform_release >= \"11.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1305,7 +1305,8 @@ version = "12.2"
 description = "Wrappers for the framework AVKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"13.0\""
 files = [
     {file = "pyobjc_framework_avkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:3b795109fed005124119e3e7e04be5e4a314efe4914307cdb33a06820ce7bb11"},
     {file = "pyobjc_framework_avkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:f27c4d23b66ab428c57b7ae4682ca6117876cf4be1594f1f87eb57824ac2e3ea"},
@@ -1318,7 +1319,6 @@ files = [
     {file = "pyobjc_framework_avkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:f089e1022690eed0bb2111e64dec71b1779885e5cc7fe745b7ca1f6df1545fde"},
     {file = "pyobjc_framework_avkit-12.2.tar.gz", hash = "sha256:e93667aa0d1283e692c6709b79212438e5fc7eb621371f573a7eccf3ecaa57ee"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"13.0\"", dev = "platform_release >= \"13.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1331,7 +1331,8 @@ version = "12.2"
 description = "Wrappers for the framework AVRouting on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_avrouting-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:15cf594e0a1f83d4ae51040119c5318a883eb25c1ff5fd382675553c3ed9833f"},
     {file = "pyobjc_framework_avrouting-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:3b18f5eec55a9fe15176a52c31725117960a992b51d7e581316d474056418508"},
@@ -1344,7 +1345,6 @@ files = [
     {file = "pyobjc_framework_avrouting-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:7374ea465ea07f70eca80896701bd216bea9f32a46e3b52db55fd34da287791c"},
     {file = "pyobjc_framework_avrouting-12.2.tar.gz", hash = "sha256:78affe0c4335ff47f186fed21965f8a381e46429c1a52794044cf2835b48dd4f"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1356,7 +1356,8 @@ version = "12.2"
 description = "Wrappers for the framework BackgroundAssets on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_backgroundassets-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:ce49fbef8b92e326ef71d04f460e6e75cc1dc4e7940fb6f1f6c2c7e603ef71e6"},
     {file = "pyobjc_framework_backgroundassets-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:27e2e8b174fdf01d6d0fa7f789f41ebcf0a78f05f45c16592ab3a29e496834eb"},
@@ -1369,7 +1370,6 @@ files = [
     {file = "pyobjc_framework_backgroundassets-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:028fb2d4adbfdaab9a531943b4019de531ae3a4a57415da6e4b059ded28b7743"},
     {file = "pyobjc_framework_backgroundassets-12.2.tar.gz", hash = "sha256:6df332f129cc025843f5ba6affe651bbf6499b6be35d781fbb12b52250adba9e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1381,7 +1381,8 @@ version = "12.2"
 description = "Wrappers for the framework BrowserEngineKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"23.4\""
 files = [
     {file = "pyobjc_framework_browserenginekit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:65331ce92345623e153a5d8def6a3ea3cb8a5d3ac8e617a839806a47c0ef8b3e"},
     {file = "pyobjc_framework_browserenginekit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:99ecaa16abd39efb030cef2b0e590e49cb7cc0b2f2a9588fd294a271e6c03130"},
@@ -1394,7 +1395,6 @@ files = [
     {file = "pyobjc_framework_browserenginekit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:3eabf92613a55e9adbb0e8933898622868e2ab10e1731dca25cb8885ac73f0d1"},
     {file = "pyobjc_framework_browserenginekit-12.2.tar.gz", hash = "sha256:f38924bc5e8ab80d1248b00554015b4a86ec3c3c17c779a3e43a0179671e4d69"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"23.4\"", dev = "platform_release >= \"23.4\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1409,12 +1409,12 @@ version = "12.2"
 description = "Wrappers for the framework BusinessChat on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"18.0\""
 files = [
     {file = "pyobjc_framework_businesschat-12.2-py2.py3-none-any.whl", hash = "sha256:c96bceb6796f1fb82edafcda75d5abb59e165aa0f55a6e646638ab56d94ceaa3"},
     {file = "pyobjc_framework_businesschat-12.2.tar.gz", hash = "sha256:77809904d62b18377e0764458044f30ba380f462f616cb69628431814afb6f14"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"18.0\"", dev = "platform_release >= \"18.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1426,12 +1426,12 @@ version = "12.2"
 description = "Wrappers for the framework CalendarStore on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"9.0\""
 files = [
     {file = "pyobjc_framework_calendarstore-12.2-py2.py3-none-any.whl", hash = "sha256:cc9b0cee139d0552d8b924aca13c8ea3a51caa0e2bbf57540d84f249decd3846"},
     {file = "pyobjc_framework_calendarstore-12.2.tar.gz", hash = "sha256:26fd412f9c4b9bf5243d44f87b03e24c80562012f6db4ec88c78cc2ffe63e7bd"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"9.0\"", dev = "platform_release >= \"9.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1443,7 +1443,8 @@ version = "12.2"
 description = "Wrappers for the framework CallKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_callkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:ac91cff88871cd38884375e6413b964ea22d1a5e1c4b61f22da353269f2128f2"},
     {file = "pyobjc_framework_callkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:5e4dcfb7d1ad9ced612c5fbdf7e9dfbc03dd128b987963e7c9f7e50f60d061f1"},
@@ -1456,7 +1457,6 @@ files = [
     {file = "pyobjc_framework_callkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:e0658e53a50a4244335b840c45825845350b2d2e9269ead43d7beb1430062d18"},
     {file = "pyobjc_framework_callkit-12.2.tar.gz", hash = "sha256:862c4e7475cfc2ee6c663f042fc4a025cbf07edb7608aa8556e64a0591e070fe"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1468,12 +1468,12 @@ version = "12.2"
 description = "Wrappers for the framework Carbon on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_carbon-12.2-py2.py3-none-any.whl", hash = "sha256:2420af5872473b91080b8000a50ab2e5053611dc68c094e257b75939f3fddef4"},
     {file = "pyobjc_framework_carbon-12.2.tar.gz", hash = "sha256:965a291f5d5db032057e00666b5a6baed66c564451db66e005fd88be17ed8e27"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1485,7 +1485,8 @@ version = "12.2"
 description = "Wrappers for the framework CFNetwork on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_cfnetwork-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1c1c910e1f917fe484b64b755ebd8a2befd80580308d0564b16fb7b00eb1ffb5"},
     {file = "pyobjc_framework_cfnetwork-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:ccb43583d1971168c624f1dae278e12ba768e584a1e1513bbca2edb067b45611"},
@@ -1498,7 +1499,6 @@ files = [
     {file = "pyobjc_framework_cfnetwork-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:5400c56807880e58bac7ce3d48e7b9c773eda8ae1774f361e2e1c5e4afcc990e"},
     {file = "pyobjc_framework_cfnetwork-12.2.tar.gz", hash = "sha256:d50078305b840d1c4f9d47c7c7cb66508766189f9aec6683f4207fccd6d096ee"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1510,12 +1510,12 @@ version = "12.2"
 description = "Wrappers for the framework Cinematic on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"23.0\""
 files = [
     {file = "pyobjc_framework_cinematic-12.2-py2.py3-none-any.whl", hash = "sha256:8df478081b8248a32e91aa2981806e05c551bc6f9ec1286b5ca2d1c64e981f6a"},
     {file = "pyobjc_framework_cinematic-12.2.tar.gz", hash = "sha256:2bec1954c5241e5c8dbefcab6d5b300e62f76eb3907a177840357f9de8474d7a"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"23.0\"", dev = "platform_release >= \"23.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1530,7 +1530,8 @@ version = "12.2"
 description = "Wrappers for the framework ClassKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_classkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1b3bf141c82e4e5f302d7e961e508c5f0271ff5609bd932006071182cb251815"},
     {file = "pyobjc_framework_classkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:65883957cf4c49223b7621bc6c5dafd79d8d65ef32d454291d32ec201e4657f1"},
@@ -1543,7 +1544,6 @@ files = [
     {file = "pyobjc_framework_classkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:566d622feb6c5c45a9a8b60dca97dc9941f8b88826f7f91138e81719041288e1"},
     {file = "pyobjc_framework_classkit-12.2.tar.gz", hash = "sha256:41ca16e92a844bed689b634707a07ebd38bf53e1a0793bcb1005347221889d7e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1555,12 +1555,12 @@ version = "12.2"
 description = "Wrappers for the framework CloudKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"14.0\""
 files = [
     {file = "pyobjc_framework_cloudkit-12.2-py2.py3-none-any.whl", hash = "sha256:1e00a6d02ac005a4dd31aa0aa5e22fdd3e05f8324f91a175dfae7fd45d85afd1"},
     {file = "pyobjc_framework_cloudkit-12.2.tar.gz", hash = "sha256:7849629cc7c726c1a3e16b3324d9fac57f72b938a66f10d480f52e381bef1223"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"14.0\"", dev = "platform_release >= \"14.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1575,7 +1575,8 @@ version = "12.2"
 description = "Wrappers for the Cocoa frameworks on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_cocoa-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:a2efad455ded551d1a033fd22245d57b71b6c065e8b52158dceed1611b5ae033"},
     {file = "pyobjc_framework_cocoa-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:0bb7cd468ca89bbc2d1d8acb930b4f4fdce8826de30a66608fc28f8880c1f6a6"},
@@ -1588,7 +1589,6 @@ files = [
     {file = "pyobjc_framework_cocoa-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:5a0bed77b0b56074cc2b4564aae3e6e9d5da5fdf93252f50b6dbced0f7fece3a"},
     {file = "pyobjc_framework_cocoa-12.2.tar.gz", hash = "sha256:20b392e2b7241caad0538dfde12143343e5dfe48f72e7df660a7548e635903dc"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1599,12 +1599,12 @@ version = "12.2"
 description = "Wrappers for the framework Collaboration on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"9.0\""
 files = [
     {file = "pyobjc_framework_collaboration-12.2-py2.py3-none-any.whl", hash = "sha256:219f8e5b1f0cc25dc48460ca909c09127eb80b3aa0262cb50139cd46c84b63d1"},
     {file = "pyobjc_framework_collaboration-12.2.tar.gz", hash = "sha256:77707156f677c502fa973bbb3028ad1cea8557875e75f1a03f605678c881289a"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"9.0\"", dev = "platform_release >= \"9.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1616,12 +1616,12 @@ version = "12.2"
 description = "Wrappers for the framework ColorSync on Mac OS X"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"17.0\""
 files = [
     {file = "pyobjc_framework_colorsync-12.2-py2.py3-none-any.whl", hash = "sha256:5d2ce9acd7ec28133facf0af900fc4a5d36971083811eb6da775be4b659f9b77"},
     {file = "pyobjc_framework_colorsync-12.2.tar.gz", hash = "sha256:b403820f3504b0e728f883575637c217a2043fafca5c0b315f03c88805d37958"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"17.0\"", dev = "platform_release >= \"17.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1633,12 +1633,12 @@ version = "12.2"
 description = "Wrappers for the framework CompositorServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"25.0\""
 files = [
     {file = "pyobjc_framework_compositorservices-12.2-py2.py3-none-any.whl", hash = "sha256:486f5e70250892122ba90f2923dc955a3622c4a047536ee3a0b15bd3568cd171"},
     {file = "pyobjc_framework_compositorservices-12.2.tar.gz", hash = "sha256:2c1e940959270aeded95b573ed57c9edd7d3da0ccd45fb5be262c93cc62e2704"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"25.0\"", dev = "platform_release >= \"25.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1651,7 +1651,8 @@ version = "12.2"
 description = "Wrappers for the framework Contacts on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_contacts-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1bbb9153a3ef706230d05ddabe3a953b136fccba643a404e6ca3df8068f08348"},
     {file = "pyobjc_framework_contacts-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:3db10cb109f687d7ef28c471d54ffc63df77ec7685bd2663fd2b8c75a1be7f66"},
@@ -1664,7 +1665,6 @@ files = [
     {file = "pyobjc_framework_contacts-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:8d50405ecf31ab5370f9ad5fe4aa4d69e0bca5c8fff0991671bb88f65ebdf3c0"},
     {file = "pyobjc_framework_contacts-12.2.tar.gz", hash = "sha256:117989ffed4f41d0bbf7e81dde8154a31995d2adf1fe898c2917bc6e9c1dc122"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1676,7 +1676,8 @@ version = "12.2"
 description = "Wrappers for the framework ContactsUI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_contactsui-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:3ee2052602e2ec612d5734265ee1489111c9b6a194e27676e1bcce8e8b2ad0c3"},
     {file = "pyobjc_framework_contactsui-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:cb5a39864af643f8bed07a99e22c73f0a46934c4247369a50c305ea11c435755"},
@@ -1689,7 +1690,6 @@ files = [
     {file = "pyobjc_framework_contactsui-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:993702a013f381d763be9b2bb45a363439562dbfe6238846c76c798305e3afb5"},
     {file = "pyobjc_framework_contactsui-12.2.tar.gz", hash = "sha256:ca1ab431b8838240877d8c8c1776d58c7eae9f9a7b193b0cc761162f6baf58bb"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1702,7 +1702,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreAudio on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_coreaudio-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:22451de9c391d6f82a89f8cb9a2574d89da7534ffaaddfb0b6b034709a8df5be"},
     {file = "pyobjc_framework_coreaudio-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:c74eb20e20597b07a702a24ae9fd8bb986a51baf24c503e5a4de2511dc01114c"},
@@ -1715,7 +1716,6 @@ files = [
     {file = "pyobjc_framework_coreaudio-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:7f8ebd42735ca954d457c87e815da632e2ccd3b55ea501cda488389dd1f37093"},
     {file = "pyobjc_framework_coreaudio-12.2.tar.gz", hash = "sha256:1990be9a9311869b551e6a997ee84bee12ea38fc978d5fa7fc0119caff2f9ba5"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1727,7 +1727,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreAudioKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_coreaudiokit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:76a562dffde10d87c208d9f9443545e3dd2b596d7a1541014642b4f75aebd7e9"},
     {file = "pyobjc_framework_coreaudiokit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:1d26f4b1751c1351450f4446cf9ed549de2109fa984bfdb700666c1123eaed0c"},
@@ -1740,7 +1741,6 @@ files = [
     {file = "pyobjc_framework_coreaudiokit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:e06953ff761da08123cd18225d008f6b6c35f1809862d46bfe825f618409acc8"},
     {file = "pyobjc_framework_coreaudiokit-12.2.tar.gz", hash = "sha256:cb743400fff2cc0ee5837d124c1665135559d8505d28996423ed4a609221614c"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1753,7 +1753,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreBluetooth on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"14.0\""
 files = [
     {file = "pyobjc_framework_corebluetooth-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:c2732cd05d26ac1541ce41cc6ece4d94108601ed503ddfe6dc6afd36a834cd65"},
     {file = "pyobjc_framework_corebluetooth-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:b03beace02ca1963697f35faf4d3d0263f707e0182f67950212c890dd9d19e6f"},
@@ -1766,7 +1767,6 @@ files = [
     {file = "pyobjc_framework_corebluetooth-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:42db087cd3a328abc620c76c7f708d7c2b451f3dbc0779983812a0c84320fe60"},
     {file = "pyobjc_framework_corebluetooth-12.2.tar.gz", hash = "sha256:8b4e5ca99953c360c391a695b0782a5328fcecafd56fdf790ad709e932feb306"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"14.0\"", dev = "platform_release >= \"14.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1778,7 +1778,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreData on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_coredata-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:70d4fe5a2b5d88d85a9e433ee84694879c447ddbd009265f1f9dc354a6809615"},
     {file = "pyobjc_framework_coredata-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:69dea4cca7b279ec66abb9f3804763770917b232c6f3df460dc150f687136c1a"},
@@ -1791,7 +1792,6 @@ files = [
     {file = "pyobjc_framework_coredata-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:262a9cdaa31a38bdf9087c4f89b235b389d1c778ab554a881559c3e0640ce540"},
     {file = "pyobjc_framework_coredata-12.2.tar.gz", hash = "sha256:1942049d656e264f47177c2fbd84314839bf55f61a825ae49f4fc7b0ebb078da"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1803,12 +1803,12 @@ version = "12.2"
 description = "Wrappers for the framework CoreHaptics on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_corehaptics-12.2-py2.py3-none-any.whl", hash = "sha256:c04c64212e7e7a0859b23b939a4375a349176317cb2b11553d388965d9a8fec8"},
     {file = "pyobjc_framework_corehaptics-12.2.tar.gz", hash = "sha256:d55b39ea4d998dd50f980e8c1800df2558099b96a99f25813bed702ebc2bf43e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1820,7 +1820,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreLocation on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_corelocation-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:09f52775ffa96af024cb810bcc606aeb5e41545b6f23cf40235dcfdddaa2f007"},
     {file = "pyobjc_framework_corelocation-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:a44f5444b78cd8bb1c75c372e4418c0a2c37d5c9ebd60e5d20e3900b0192e203"},
@@ -1833,7 +1834,6 @@ files = [
     {file = "pyobjc_framework_corelocation-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:0f24d4ecd314691d773b98276880864dc3899605b2d708c75532acaf9c517074"},
     {file = "pyobjc_framework_corelocation-12.2.tar.gz", hash = "sha256:1e0f389140707ece2bb4d08def421e25b792dcc2a34000dfb128dec2e685d725"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1845,7 +1845,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreMedia on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"11.0\""
 files = [
     {file = "pyobjc_framework_coremedia-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:422d8af0e8f62a1385aa86228e47ed7c01405831102bef1ee43f07320711c082"},
     {file = "pyobjc_framework_coremedia-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:171b8dfc6ef34678d46470b6bc176e5c3cbb39c81abbce03d276d5d3680a5ee3"},
@@ -1858,7 +1859,6 @@ files = [
     {file = "pyobjc_framework_coremedia-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:ee5889c07f61d16f8d195a793a7f0ebf7f5c4eef4d1ef2fdbf5c823c74e242d0"},
     {file = "pyobjc_framework_coremedia-12.2.tar.gz", hash = "sha256:95ed2063cc48d73f6eb06f4e603372515b5b009bd2d6e547f90bbe9e64217206"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"11.0\"", dev = "platform_release >= \"11.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1870,7 +1870,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreMediaIO on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"11.0\""
 files = [
     {file = "pyobjc_framework_coremediaio-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:bd3ee9dcd878337161d613a8346dd7012acab7638d83d68904d0bb9e1f65d2b7"},
     {file = "pyobjc_framework_coremediaio-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:43f21abfff64627906d66bacdc1b1bb4927607104cee2d3f29dcd0e3b22da1a1"},
@@ -1883,7 +1884,6 @@ files = [
     {file = "pyobjc_framework_coremediaio-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:9ce96c501bd64fbeb52e23332b72633f8b1d2f9390f01c5e1787c8f711eb4646"},
     {file = "pyobjc_framework_coremediaio-12.2.tar.gz", hash = "sha256:38f656ebe897262463277d4551fc6cca4ac766629476576f040b34e84c956506"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"11.0\"", dev = "platform_release >= \"11.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1895,7 +1895,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreMIDI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_coremidi-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1cff986805ddf6fa4a1ea697e13102263284c726391a43779d4ca401e8c69904"},
     {file = "pyobjc_framework_coremidi-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:151d7499a9e5343842c5deb67df8002ab22ecff92a0a238529c3d9abdbab9e4a"},
@@ -1908,7 +1909,6 @@ files = [
     {file = "pyobjc_framework_coremidi-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:2f7e8a895852b4c3cfcc20cee8a1bd63af7577e0fe79a2e79de87d4da8ee671a"},
     {file = "pyobjc_framework_coremidi-12.2.tar.gz", hash = "sha256:a00e1d906f1a1fca302c867406ed8e1e23651b1551ce1943e9495e7665b6b0d3"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1920,7 +1920,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreML on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"17.0\""
 files = [
     {file = "pyobjc_framework_coreml-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:8127be60808dba7e945f69598664b1a52e1ee6331f3695da08e8642b23b10f8f"},
     {file = "pyobjc_framework_coreml-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:053f03cea0e7a4ab32ffaca03825ddbf1800a6a1dee1fa0e69e5b3948c5d6a56"},
@@ -1933,7 +1934,6 @@ files = [
     {file = "pyobjc_framework_coreml-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:82dded9d153db057aae965539cb28b4dc43391e5e07f38ac60db83061a9453ca"},
     {file = "pyobjc_framework_coreml-12.2.tar.gz", hash = "sha256:884f1f68c7a74c56d26858051da8a1e19848be97f2c4b06b32ae93e505109583"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"17.0\"", dev = "platform_release >= \"17.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1945,7 +1945,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreMotion on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_coremotion-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:8ad115ade05565b7199e09a8bc879b26e98eb0c1295a5fba93d0fa261c8c6869"},
     {file = "pyobjc_framework_coremotion-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:d0ffddac1e843fd83dab1fb0d16c4ce7a63615a834cec5e7469d4db68782b8e0"},
@@ -1958,7 +1959,6 @@ files = [
     {file = "pyobjc_framework_coremotion-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:55dc932bef0ffa3b23e7e07a4016f4fa36687204528187c17dcb19cc4d322456"},
     {file = "pyobjc_framework_coremotion-12.2.tar.gz", hash = "sha256:8a2a06809b78a72cad52f27aa830c883e19ca36b57f8418ccfaf29773c5dc5ac"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1970,7 +1970,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_coreservices-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:c8218a3e0f0814c6e9fadc4712ab4715097f0d388e09e85fc0a025e56b67ebff"},
     {file = "pyobjc_framework_coreservices-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:305a2c5c1830ac3c0bd18d08d7efee8345dd655d5cc79d84d3c43bb539b2f0e6"},
@@ -1983,7 +1984,6 @@ files = [
     {file = "pyobjc_framework_coreservices-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:b17f2743ac0fe1245b16bccc2abc2568d4b33f0655b8f805d4bf19754284363e"},
     {file = "pyobjc_framework_coreservices-12.2.tar.gz", hash = "sha256:ea52c77e9a162b6823c3b364f391b4369d967365e5207a0d45cf6d0e37cec0e6"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -1996,7 +1996,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreSpotlight on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"17.0\""
 files = [
     {file = "pyobjc_framework_corespotlight-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:f7dea56b3042bcf36e4c1e6d71220ef2cf3e47b7da20d65ea371ef0bc8b3f0bd"},
     {file = "pyobjc_framework_corespotlight-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:da63d132bbe0e0a3d90f79f3eee9227926189d2a4d0801ff2a879b6235402cfa"},
@@ -2009,7 +2010,6 @@ files = [
     {file = "pyobjc_framework_corespotlight-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:61b331e85d12f550797a8010aa2f1d369a2fcd21990adbf3675005dc9e2475e6"},
     {file = "pyobjc_framework_corespotlight-12.2.tar.gz", hash = "sha256:6aefcef43d3d3bf3e7cbcffca053a7dad07c434aa11b117dbb39d5cf596ee829"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"17.0\"", dev = "platform_release >= \"17.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2021,7 +2021,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreText on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_coretext-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:b81b1e7cd9256c5832af98ced9810b3680015a7b015db54276340152cfe7a065"},
     {file = "pyobjc_framework_coretext-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:19caa22d623c73bb3e158b8807577926e3e8f85bc83e4e111e74fd019e07ad57"},
@@ -2034,7 +2035,6 @@ files = [
     {file = "pyobjc_framework_coretext-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:06bcb4e7de281423c212a39b3dc9873f09d9fd69da0abe93d987a59761bf265a"},
     {file = "pyobjc_framework_coretext-12.2.tar.gz", hash = "sha256:82def2c281347e0677866315675124c84c36e9bc21651d62870cfdcecb7da34e"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2047,7 +2047,8 @@ version = "12.2"
 description = "Wrappers for the framework CoreWLAN on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_corewlan-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:fcf9fda60945d37517cb3b8314a6dfb70c3b9ef82546037898b405c33dbe4c2e"},
     {file = "pyobjc_framework_corewlan-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:e619d44989c36a233fd35d32817aa0018d1556b3e67c22704bf594b82a7b7e5c"},
@@ -2060,7 +2061,6 @@ files = [
     {file = "pyobjc_framework_corewlan-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:5d31f40aad614fd19d6a9117f9a66f07eafe7a592ddc60258e9bf3f09d2fe552"},
     {file = "pyobjc_framework_corewlan-12.2.tar.gz", hash = "sha256:e0d81a95f6923c3dea9b0ab34fb0b028f5838930a602b5aa4bf9546eb268be9d"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2072,7 +2072,8 @@ version = "12.2"
 description = "Wrappers for the framework CryptoTokenKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"14.0\""
 files = [
     {file = "pyobjc_framework_cryptotokenkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:77067d69b484e18b53e9517c517e8c7c91d39e8822ef673280aafdff99b9ee59"},
     {file = "pyobjc_framework_cryptotokenkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:0146ebfa2f6603fe090a29e386d263569f043911694cade1b14e627c2325583d"},
@@ -2085,7 +2086,6 @@ files = [
     {file = "pyobjc_framework_cryptotokenkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:a0df6e75334f762402e18f949a4e8485c73361f9fbc94d4a0dc8351832687db7"},
     {file = "pyobjc_framework_cryptotokenkit-12.2.tar.gz", hash = "sha256:bf070e95f82db3bf8dcb0d67d459df3810bd9dfec63a31982adefba146d9e777"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"14.0\"", dev = "platform_release >= \"14.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2097,12 +2097,12 @@ version = "12.2"
 description = "Wrappers for the framework DataDetection on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"21.0\""
 files = [
     {file = "pyobjc_framework_datadetection-12.2-py2.py3-none-any.whl", hash = "sha256:23246bea4dce73c702e176ed2be1ba26afc48a627c713a91417716c3d5915ec0"},
     {file = "pyobjc_framework_datadetection-12.2.tar.gz", hash = "sha256:5fe732751662f119c8435c608785e86edff1b2ee394fbb9f010b5613bb6703d2"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"21.0\"", dev = "platform_release >= \"21.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2114,12 +2114,12 @@ version = "12.2"
 description = "Wrappers for the framework DeviceCheck on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_devicecheck-12.2-py2.py3-none-any.whl", hash = "sha256:77bbc267426dbdf80799d9a63ed17545c2c8332e765da8f5ce34f40be78e7776"},
     {file = "pyobjc_framework_devicecheck-12.2.tar.gz", hash = "sha256:2750bdfc7fa11e02c88fc8d681dcf202ce2f52c4eaafc55f0afa38df1bc66369"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2131,12 +2131,12 @@ version = "12.2"
 description = "Wrappers for the framework DeviceDiscoveryExtension on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"24.0\""
 files = [
     {file = "pyobjc_framework_devicediscoveryextension-12.2-py2.py3-none-any.whl", hash = "sha256:d0f2187013cefb9dc3ff20abd8dd0260a257a6bd6cd661b4d5a364c877ee4ac7"},
     {file = "pyobjc_framework_devicediscoveryextension-12.2.tar.gz", hash = "sha256:2f3f21f9f2c0e0f714bd38076d7082c923650ce180a15aab77f271575b4eef04"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"24.0\"", dev = "platform_release >= \"24.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2148,12 +2148,12 @@ version = "12.2"
 description = "Wrappers for the framework DictionaryServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"9.0\""
 files = [
     {file = "pyobjc_framework_dictionaryservices-12.2-py2.py3-none-any.whl", hash = "sha256:9257ed93dad0b4bcf82c871bc587f994d7619e5916df3662cc2510fe8f85ed5c"},
     {file = "pyobjc_framework_dictionaryservices-12.2.tar.gz", hash = "sha256:51e826c92fc04a0aa531bd04f092ca1edb6c470bce3f04c4eff84fbedb61d929"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"9.0\"", dev = "platform_release >= \"9.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2165,7 +2165,8 @@ version = "12.2"
 description = "Wrappers for the framework DiscRecording on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_discrecording-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:0c80862b61cd5bc5d364fe7d1a3fb6ba4ee91ff104d7d17424bc457db682c692"},
     {file = "pyobjc_framework_discrecording-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:cd8d85cd7422f472845c0f59ee179be191232342435dfc79ed24a8808105367f"},
@@ -2178,7 +2179,6 @@ files = [
     {file = "pyobjc_framework_discrecording-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:df4b4a6badb024dc56127614712e2666a186ec3efeafeccb6c2cc3b7f10db75e"},
     {file = "pyobjc_framework_discrecording-12.2.tar.gz", hash = "sha256:0b1df1d250b892d1b48e1ce87c9c89e944c28a4bb708d43848f12ff2d69cc396"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2190,12 +2190,12 @@ version = "12.2"
 description = "Wrappers for the framework DiscRecordingUI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_discrecordingui-12.2-py2.py3-none-any.whl", hash = "sha256:4ae5d1ec84ff47cf041973c112024f7b3b7c6eb0d5cbd3cecc393998efa0f654"},
     {file = "pyobjc_framework_discrecordingui-12.2.tar.gz", hash = "sha256:932175c1c2df93673ffd87e4d5270bd03591548e26e39664d813b5e1b0c0a47b"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2208,12 +2208,12 @@ version = "12.2"
 description = "Wrappers for the framework DiskArbitration on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_diskarbitration-12.2-py2.py3-none-any.whl", hash = "sha256:9952012b50f8d87849ca74c56a8b6fcd9373e8b5aa4566f628165cd4a2458a25"},
     {file = "pyobjc_framework_diskarbitration-12.2.tar.gz", hash = "sha256:b5ce6750cec175066ed6dc6ccc9548201642f246130c1a82d01690747028505d"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2225,12 +2225,12 @@ version = "12.2"
 description = "Wrappers for the framework DVDPlayback on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_dvdplayback-12.2-py2.py3-none-any.whl", hash = "sha256:37d0b460e0783c78c3099a653ae1a7db8158b12e4da6ca91d513ec708514baa6"},
     {file = "pyobjc_framework_dvdplayback-12.2.tar.gz", hash = "sha256:2f504e578a809ae8544e50d9958bc2101fbb0a35921f370c810b575b70d8096e"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2242,12 +2242,12 @@ version = "12.2"
 description = "Wrappers for the framework Accounts on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_eventkit-12.2-py2.py3-none-any.whl", hash = "sha256:b56a736182365eff268b6a8c958a663d53432bac5befd3116570d3f1e4ec8b1a"},
     {file = "pyobjc_framework_eventkit-12.2.tar.gz", hash = "sha256:c4e96235a1f0e43ea9699054c289369efb9d7645254a6169559c671b4ed21f86"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2259,12 +2259,12 @@ version = "12.2"
 description = "Wrappers for the framework ExceptionHandling on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_exceptionhandling-12.2-py2.py3-none-any.whl", hash = "sha256:14a76583bec99e18c5d0b0fd1db554d6f75b614f2912435836bc4abe6e1220c5"},
     {file = "pyobjc_framework_exceptionhandling-12.2.tar.gz", hash = "sha256:c11ab2b122b6f2d1dc4625d163a2c5713df5ec3b0372394d3b6ed875a49397f5"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2276,12 +2276,12 @@ version = "12.2"
 description = "Wrappers for the framework ExecutionPolicy on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_executionpolicy-12.2-py2.py3-none-any.whl", hash = "sha256:a8b6177182c1cf316696db76de23dd40b47e41e8eebbe6fa204492055c8f1f3b"},
     {file = "pyobjc_framework_executionpolicy-12.2.tar.gz", hash = "sha256:9b527b0deede8057a6482a6837ad8b3f6c3117232b8c9f97a3244991c9d0449f"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2293,7 +2293,8 @@ version = "12.2"
 description = "Wrappers for the framework ExtensionKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_extensionkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:848e601a3a566fd9742d1e6ce6e1d2109f0adf7aeed2380c319cf0661261b806"},
     {file = "pyobjc_framework_extensionkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:7e8553ac034b73d26b06041c989532f6c918fcd9e1ec07a65eec71ca4839ba18"},
@@ -2306,7 +2307,6 @@ files = [
     {file = "pyobjc_framework_extensionkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:b355d0689196bb5b3a62c73fb1a9abf4b68e5582cce2b1057f2a6a02a7177f8d"},
     {file = "pyobjc_framework_extensionkit-12.2.tar.gz", hash = "sha256:eb85b5ccea05f5bc41d5c134a2d199eae2a3bc4ee12cdddb94501272a45052e7"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2318,7 +2318,8 @@ version = "12.2"
 description = "Wrappers for the framework ExternalAccessory on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"17.0\""
 files = [
     {file = "pyobjc_framework_externalaccessory-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:a9cdc7483125a6e152b5de399ae8ae6df855c9a0b7d64700aecdbcd93b47345b"},
     {file = "pyobjc_framework_externalaccessory-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:b95353cab4515ccf3821fbe0535ba7270bd7c2b39ac144199fae6da06b6651f3"},
@@ -2331,7 +2332,6 @@ files = [
     {file = "pyobjc_framework_externalaccessory-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:02e4c9fe185372906f4cbde8d16d5756e71c134e969618703e3449414774eac7"},
     {file = "pyobjc_framework_externalaccessory-12.2.tar.gz", hash = "sha256:0df5c2db52220753e3c7673fa3051fdf5d2890b9972dc3e140edc3dc16c7cd4d"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"17.0\"", dev = "platform_release >= \"17.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2343,7 +2343,8 @@ version = "12.2"
 description = "Wrappers for the framework FileProvider on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_fileprovider-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:58f4b7fe0cf6511c6ebc1cfe40c15b4bd6310219d962c025b8236720b73364c3"},
     {file = "pyobjc_framework_fileprovider-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:50928a80708568c8d788de604c0747ff01ad825fb2ac770a9a38f184be1d504b"},
@@ -2356,7 +2357,6 @@ files = [
     {file = "pyobjc_framework_fileprovider-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:f9002875073d1e0c74d760518bca5101743392515478eed570d67f28bdb6ba07"},
     {file = "pyobjc_framework_fileprovider-12.2.tar.gz", hash = "sha256:f9b146eab8a7f664f0e417310802bc2e31ad52b0f61951ce58e471a989ad4e71"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2368,12 +2368,12 @@ version = "12.2"
 description = "Wrappers for the framework FileProviderUI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_fileproviderui-12.2-py2.py3-none-any.whl", hash = "sha256:0874b16ea64d055f53d0c6ede6ba61b3dbe9d2b27a64db5c12b829391a510cb6"},
     {file = "pyobjc_framework_fileproviderui-12.2.tar.gz", hash = "sha256:520974c2966057cd47206f8792d8066531551b3222c8a5824851cc19e9bba7f0"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2385,12 +2385,12 @@ version = "12.2"
 description = "Wrappers for the framework FinderSync on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"14.0\""
 files = [
     {file = "pyobjc_framework_findersync-12.2-py2.py3-none-any.whl", hash = "sha256:6f7a461df88f4fe0cd64c0ad326c77bf1a8f72afb1bdf1f42c1d7e02b7340dd4"},
     {file = "pyobjc_framework_findersync-12.2.tar.gz", hash = "sha256:e8c8dbfd0c1e9a055d5778c8f65a72bfaabfb8c30ff9ef635ea25ee2d607dd75"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"14.0\"", dev = "platform_release >= \"14.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2402,7 +2402,8 @@ version = "12.2"
 description = "Wrappers for the framework FSEvents on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_fsevents-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:5dea14ad5cbc42ed096e4544cde5d2a0f12cc4c6a743012095b96bea66b26df6"},
     {file = "pyobjc_framework_fsevents-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:4f705cf041ec7094aee1be2a219dd67a206cabf935b7d6f47eba8bcff5999f55"},
@@ -2415,7 +2416,6 @@ files = [
     {file = "pyobjc_framework_fsevents-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:7665f7e2944fa50727e818dfa45a2c6d1234bd64d352559c2d6f3946febcf707"},
     {file = "pyobjc_framework_fsevents-12.2.tar.gz", hash = "sha256:c6599daed508605916fa31b23866c20ccc12565b568f61a43b5626d9b8bb8778"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2427,7 +2427,8 @@ version = "12.2"
 description = "Wrappers for the framework FSKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"24.4\""
 files = [
     {file = "pyobjc_framework_fskit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:9b506522235d8cf1fb76b0b95921561126a5b31b34c01629da00664c003c2fe1"},
     {file = "pyobjc_framework_fskit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:26720885a6d1856d34ac83fa6e727e92111ebe582c0a2715e91b3e1c46864fbb"},
@@ -2440,7 +2441,6 @@ files = [
     {file = "pyobjc_framework_fskit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:c8f247c6b3b77edea91f70e9c125f7faa493807c5e6b1922842c0046bc83bf52"},
     {file = "pyobjc_framework_fskit-12.2.tar.gz", hash = "sha256:a1a7f9678c55fa947783caa24325c91727cc3045b877c6770262790c00da3952"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"24.4\"", dev = "platform_release >= \"24.4\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2452,7 +2452,8 @@ version = "12.2"
 description = "Wrappers for the framework GameCenter on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_gamecenter-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:bfe1cc3df6109f587252a10bfe04542677bbc75ff6965e19b5a19241196d42b2"},
     {file = "pyobjc_framework_gamecenter-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:b08364d2a1a58386d47493495fed3adb9828a055b41fd6cbf3631861fddb4ede"},
@@ -2465,7 +2466,6 @@ files = [
     {file = "pyobjc_framework_gamecenter-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:834171b3059e778365190dfef1e075ca897cfb0a11e4af9f8a59d3a96285f16c"},
     {file = "pyobjc_framework_gamecenter-12.2.tar.gz", hash = "sha256:a1207696a547011094a4b8d2865a3a9018a622647a8a0371baf86a3e5959ef4f"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2477,7 +2477,8 @@ version = "12.2"
 description = "Wrappers for the framework GameController on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"13.0\""
 files = [
     {file = "pyobjc_framework_gamecontroller-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:f0388a602396e6f4818fed38b940c8a1b10b108e854a2e3daa80e3674dad1e2b"},
     {file = "pyobjc_framework_gamecontroller-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:6d3bb75d9db8d0074cae97617b6f8d2b2693530da6e39e0010b612691bae625a"},
@@ -2490,7 +2491,6 @@ files = [
     {file = "pyobjc_framework_gamecontroller-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:821098a524459089c77b19c4d11a378378fb010732babbb9dab1ab11118b5149"},
     {file = "pyobjc_framework_gamecontroller-12.2.tar.gz", hash = "sha256:130418999cb5e202c0775fc1587666c6b9fa1d9285341eb6cbd589ecbe758a64"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"13.0\"", dev = "platform_release >= \"13.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2502,7 +2502,8 @@ version = "12.2"
 description = "Wrappers for the framework GameKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_gamekit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:39e3368dfe30e777ca9e8c8f9b0749d325d16c82fb161f5bcd3600f1b18b54bb"},
     {file = "pyobjc_framework_gamekit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:1a0bc379c7f44581cf32990da3920adeffd20323e24b1028b4e164b03178955c"},
@@ -2515,7 +2516,6 @@ files = [
     {file = "pyobjc_framework_gamekit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:97ebf06d2140661ab01701a91534b7ff9387625ee61e372370894e3debb004ca"},
     {file = "pyobjc_framework_gamekit-12.2.tar.gz", hash = "sha256:d4f4f98539db6125d5fb249b845398a0534f8962e6db390822da808b91ece009"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2528,7 +2528,8 @@ version = "12.2"
 description = "Wrappers for the framework GameplayKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_gameplaykit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:d9259f75598163be71062e579c64479b2dce8f4d1f255b3166c35523335b8bdb"},
     {file = "pyobjc_framework_gameplaykit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:a894a3177a144fbe5d7ddfb261c68a8453a2aaf86472f7e8c20f7da4d026a21b"},
@@ -2541,7 +2542,6 @@ files = [
     {file = "pyobjc_framework_gameplaykit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:14cb763e39a8705cdb39a28ada1c9ef2c5bdd47440155d1fb16a49641810920e"},
     {file = "pyobjc_framework_gameplaykit-12.2.tar.gz", hash = "sha256:27da2b7c4cdef038215246fc6c98e45e076f969ebb83d827095432a8213b57df"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2554,12 +2554,12 @@ version = "12.2"
 description = "Wrappers for the framework GameSave on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"25.0\""
 files = [
     {file = "pyobjc_framework_gamesave-12.2-py2.py3-none-any.whl", hash = "sha256:766d6eede6e7f9ef1c43333127ce42fdfa9438e62ab94c9533d32d41eb79233a"},
     {file = "pyobjc_framework_gamesave-12.2.tar.gz", hash = "sha256:e272a1ec2fc84f680226abc6a4e034534509cbd545cb937fbc76b3a95d7b9e44"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"25.0\"", dev = "platform_release >= \"25.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2571,7 +2571,8 @@ version = "12.2"
 description = "Wrappers for the framework HealthKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_healthkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:9ce9c1296608b26b13fdd9154e06928f854c41f9c8b519721a3ec1c17e17f6c8"},
     {file = "pyobjc_framework_healthkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:1166c17aa067e9c7cfbfd07f56eaae0f0ea44fa8c0e86c7772a985b40bd35342"},
@@ -2584,7 +2585,6 @@ files = [
     {file = "pyobjc_framework_healthkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:6bc2c41c2e4c42485bcb07a583dfa575678b1f220ec8b8186504495941d81793"},
     {file = "pyobjc_framework_healthkit-12.2.tar.gz", hash = "sha256:48bda5f86fff2da976c49d27c746cd190d62eebdfa6197305c3656c64a6fbf09"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2596,7 +2596,8 @@ version = "12.2"
 description = "Wrappers for the framework ImageCaptureCore on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_imagecapturecore-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:da0b08d0550ffd6e11e9d814ac1c215bb9cbd0011f4fba54a19606d949a3380c"},
     {file = "pyobjc_framework_imagecapturecore-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:e41d42db77e0bbc929c406ee4b16f389c23b5b824174485ae71c35d15de7b07d"},
@@ -2609,7 +2610,6 @@ files = [
     {file = "pyobjc_framework_imagecapturecore-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:40488cbbb0ac35545a5f55c1e06327d43927db2cbd1e339cebbef10e4e12aba2"},
     {file = "pyobjc_framework_imagecapturecore-12.2.tar.gz", hash = "sha256:c2931ca0d40d6ffe159149e140d4d158d3f844f19b99dae35f57c34551434eea"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2621,7 +2621,8 @@ version = "12.2"
 description = "Wrappers for the framework InputMethodKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"9.0\""
 files = [
     {file = "pyobjc_framework_inputmethodkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:fb241ca91e34dc6d30df752b332daa9920bf6f434293c590b846e91112e25647"},
     {file = "pyobjc_framework_inputmethodkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:c65d52b393e91af5340f8c404d5dca1bcac53a380045948fb5e5b25941010ba0"},
@@ -2634,7 +2635,6 @@ files = [
     {file = "pyobjc_framework_inputmethodkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:155a5d6a770403a99dc9a359aed08f542a309f6e3b20e96115196e7e61585b32"},
     {file = "pyobjc_framework_inputmethodkit-12.2.tar.gz", hash = "sha256:63ab93867f25a3f54fc55e98b6b0540d0d23bf6f91a0a475ff742e4221a75917"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"9.0\"", dev = "platform_release >= \"9.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2646,12 +2646,12 @@ version = "12.2"
 description = "Wrappers for the framework InstallerPlugins on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_installerplugins-12.2-py2.py3-none-any.whl", hash = "sha256:358ef2faefe1b9938c0563e95551ad685c4c2097a7b8bc46dbf394765eb00674"},
     {file = "pyobjc_framework_installerplugins-12.2.tar.gz", hash = "sha256:6de54ab966f5bb304f9f5036c41937675cfdf49c44f70a1078a87dee2520261a"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2663,12 +2663,12 @@ version = "12.2"
 description = "Wrappers for the framework InstantMessage on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"9.0\""
 files = [
     {file = "pyobjc_framework_instantmessage-12.2-py2.py3-none-any.whl", hash = "sha256:2fe9367f736b68557bf0c57a7da2c6a854cbf46ace9f6c5b161131309dc6b262"},
     {file = "pyobjc_framework_instantmessage-12.2.tar.gz", hash = "sha256:95a972697cc1c8c773d2e211815c7b4f3f11ad0aa114e46ec386d92f873d5533"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"9.0\"", dev = "platform_release >= \"9.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2681,7 +2681,8 @@ version = "12.2"
 description = "Wrappers for the framework Intents on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"16.0\""
 files = [
     {file = "pyobjc_framework_intents-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:7c5cd933c8d832ad1ac817a815512d1960731f75b0bb277cf642291ffbbd7985"},
     {file = "pyobjc_framework_intents-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:89095f0f5b5f2c99d1b670fc179abf36f7c6107acaadc6f582f5abdbe83a2080"},
@@ -2694,7 +2695,6 @@ files = [
     {file = "pyobjc_framework_intents-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:e5a9548175ff5d4630a6f2d800bbfe82e26bc4205358a7fb28429c5d40727bf5"},
     {file = "pyobjc_framework_intents-12.2.tar.gz", hash = "sha256:441acf32738c8a4fa21458467ce451ce6880d0bac71b6e63e2e6634775f603b6"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"16.0\"", dev = "platform_release >= \"16.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2706,7 +2706,8 @@ version = "12.2"
 description = "Wrappers for the framework Intents on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"21.0\""
 files = [
     {file = "pyobjc_framework_intentsui-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:f73d4e93a8a2abb263c4eae213ce78fdd9326032f8b89cbd1759edcabbe023a5"},
     {file = "pyobjc_framework_intentsui-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:a6e989903e2ee45b2da03a14e7112aa30a1cece2a308df756154256d96fb3035"},
@@ -2719,7 +2720,6 @@ files = [
     {file = "pyobjc_framework_intentsui-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:cad7677ef0ebe7e9fe83f07dea7e999f9fe067b3ff8e02520ddd3272ba19eabd"},
     {file = "pyobjc_framework_intentsui-12.2.tar.gz", hash = "sha256:46292de2f2e915ddff88a060639adb175e0b3b2452a45f00e440dc04acbe0e70"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"21.0\"", dev = "platform_release >= \"21.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2731,7 +2731,8 @@ version = "12.2"
 description = "Wrappers for the framework IOBluetooth on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_iobluetooth-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:2e848d5015d55ede9e66d75375fb14de5d9f691da04cd53c41378f002b7fb6fc"},
     {file = "pyobjc_framework_iobluetooth-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:6f0962cd2122cdf81e4d04e86380456f0caa7631e020cac5f60cfa60ed1db6e1"},
@@ -2744,7 +2745,6 @@ files = [
     {file = "pyobjc_framework_iobluetooth-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:6715d29e3f1fb465144abf77a7372795aa18e61b77abf44e9605ac657895cb9b"},
     {file = "pyobjc_framework_iobluetooth-12.2.tar.gz", hash = "sha256:7fd7265db0f467a471a015f5a32ee79fd8f42440888d16b4206bbb985ed7331d"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2756,12 +2756,12 @@ version = "12.2"
 description = "Wrappers for the framework IOBluetoothUI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_iobluetoothui-12.2-py2.py3-none-any.whl", hash = "sha256:60622518d2f70e82398c62edf5e4e72403ef9210312945d82f3151cb5e888ccb"},
     {file = "pyobjc_framework_iobluetoothui-12.2.tar.gz", hash = "sha256:7902974cbc2ec50adc38dd961b03eae6a84f082812ed60a440db6f690b30b2d2"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2773,12 +2773,12 @@ version = "12.2"
 description = "Wrappers for the framework IOSurface on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_iosurface-12.2-py2.py3-none-any.whl", hash = "sha256:3ccd3abe40e21028419a39dbea36f60cb7e34335ab1b81aebb7a1a2f644443c5"},
     {file = "pyobjc_framework_iosurface-12.2.tar.gz", hash = "sha256:d0315c6ad3b5ee72d3a5c946d9e92a4cace1a96bd0526f0b9f6b8009c26b9716"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2790,12 +2790,12 @@ version = "12.2"
 description = "Wrappers for the framework iTunesLibrary on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_ituneslibrary-12.2-py2.py3-none-any.whl", hash = "sha256:9876e99dac601dc523b2f0e528fb21b027693b2b6f7d697fdf460cb819339980"},
     {file = "pyobjc_framework_ituneslibrary-12.2.tar.gz", hash = "sha256:780f7e5f354dc2b0a27df4abb6538f730e8a29371a8703bc05edd6ce50466f8e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2807,12 +2807,12 @@ version = "12.2"
 description = "Wrappers for the framework KernelManagement on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_kernelmanagement-12.2-py2.py3-none-any.whl", hash = "sha256:14e789ed81eaaf3ca50557015416fdc232400b682b3756efaefe4afd061552e0"},
     {file = "pyobjc_framework_kernelmanagement-12.2.tar.gz", hash = "sha256:01abc525c1edbacf88425a36a055e52d1b4a024299097d9a2b25c34f2df4bafc"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2824,12 +2824,12 @@ version = "12.2"
 description = "Wrappers for the framework LatentSemanticMapping on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_latentsemanticmapping-12.2-py2.py3-none-any.whl", hash = "sha256:1c87b1dd06626eca6188c2939f0dc1f58104ac9f8979c1dd8fc5f8c7d4d901e7"},
     {file = "pyobjc_framework_latentsemanticmapping-12.2.tar.gz", hash = "sha256:20dfeeb005880053dcccc03dc6a58d796dd72d7f282caa625906bebc3631ecd4"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2841,12 +2841,12 @@ version = "12.2"
 description = "Wrappers for the framework LaunchServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_launchservices-12.2-py2.py3-none-any.whl", hash = "sha256:4a0a478dfee2c53b7f3e2168f3c0e4183621050d324e7225251706500f8f5f0e"},
     {file = "pyobjc_framework_launchservices-12.2.tar.gz", hash = "sha256:02c3f25311673fc26eebb256cd0e873c9883575804c98b97a5d2096c8cebcecd"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2858,7 +2858,8 @@ version = "12.2"
 description = "Wrappers for libdispatch on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_libdispatch-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:0a43de8025ef9e2db597dbe3d2b49c9952d0b0aa93a78d89b0bfdc58f851f42c"},
     {file = "pyobjc_framework_libdispatch-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:38fb417f3f3ee1ec20e14821f150210f5b6122e5c1d8b04958bddb660ce3d04f"},
@@ -2871,7 +2872,6 @@ files = [
     {file = "pyobjc_framework_libdispatch-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:8daaf8844b5b328cf8adb6e8c085bf2aad22237956f7c5dc6fbb7a46c5015af0"},
     {file = "pyobjc_framework_libdispatch-12.2.tar.gz", hash = "sha256:4a41879ef7716b73d70f2e40ff39353d686cbc59d48c93217ed362d2b2baf1ba"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2883,7 +2883,8 @@ version = "12.2"
 description = "Wrappers for xpc on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_libxpc-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:2c9e5f079cf4d271be77f86ceb5928f056389354ef94fbea89d10c1c653b9163"},
     {file = "pyobjc_framework_libxpc-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:0484617362aaf302b28dfd5c5fe2704ff7834a539f01df0d86b1a357f5ee8911"},
@@ -2896,7 +2897,6 @@ files = [
     {file = "pyobjc_framework_libxpc-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:c38d61a2ba5e26ba12bf0566dfa0687f396239c72f9d940d06b1e70af19cddf7"},
     {file = "pyobjc_framework_libxpc-12.2.tar.gz", hash = "sha256:6dcae3da5ab706762d68625a391c75a3969609e5676d4091947f5c1185d4f800"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2908,12 +2908,12 @@ version = "12.2"
 description = "Wrappers for the framework LinkPresentation on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_linkpresentation-12.2-py2.py3-none-any.whl", hash = "sha256:68f854b4b72fef3477f1fb6604b258207a5950164e8e278330cd4848281eafee"},
     {file = "pyobjc_framework_linkpresentation-12.2.tar.gz", hash = "sha256:bb910f692f3166d6c5fce44f501a4d64a6067bac9bc26ec9488995fae56bfe6d"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2926,7 +2926,8 @@ version = "12.2"
 description = "Wrappers for the framework LocalAuthentication on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"14.0\""
 files = [
     {file = "pyobjc_framework_localauthentication-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:df0770bb3bf8b2918c2395ff7f1368d2669a7bb189318755c7fec1e441c2ddc1"},
     {file = "pyobjc_framework_localauthentication-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:cab043474b3337b6479ab69a0a205377b6c899b0956b1b87534bd8dcaaf58a52"},
@@ -2939,7 +2940,6 @@ files = [
     {file = "pyobjc_framework_localauthentication-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:1de45570296d7ab3aa0bc66dc6d9a31d6c6b33f950ea3d5bee8e5042c6fde92e"},
     {file = "pyobjc_framework_localauthentication-12.2.tar.gz", hash = "sha256:e1d734db5ddf35093307e213115bd122ef8712463be048eabfa4062022373e21"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"14.0\"", dev = "platform_release >= \"14.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2952,12 +2952,12 @@ version = "12.2"
 description = "Wrappers for the framework LocalAuthenticationEmbeddedUI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"21.0\""
 files = [
     {file = "pyobjc_framework_localauthenticationembeddedui-12.2-py2.py3-none-any.whl", hash = "sha256:0b306917aa011deb364e85c118624d2d80c3eaf67016a345a6c4bc4960416b11"},
     {file = "pyobjc_framework_localauthenticationembeddedui-12.2.tar.gz", hash = "sha256:cff4e489375b3898f34d8ab378f8d84623ab19e89a35de958825c125aafceca6"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"21.0\"", dev = "platform_release >= \"21.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2970,12 +2970,12 @@ version = "12.2"
 description = "Wrappers for the framework MailKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"21.0\""
 files = [
     {file = "pyobjc_framework_mailkit-12.2-py2.py3-none-any.whl", hash = "sha256:25b9aa8c513c40d931a7c5cc44571fd090e3d565f2e1153a634f6980b08da733"},
     {file = "pyobjc_framework_mailkit-12.2.tar.gz", hash = "sha256:e29ea94210faefc46a4aefe0c1647bfb77b42cfc2a4962fb8316cb967b34c47f"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"21.0\"", dev = "platform_release >= \"21.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -2987,7 +2987,8 @@ version = "12.2"
 description = "Wrappers for the framework MapKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"13.0\""
 files = [
     {file = "pyobjc_framework_mapkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:3f186d0125c1a65ba9e08a10313bffcd7fb8569a827be0bf812743163bc4a643"},
     {file = "pyobjc_framework_mapkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:1fa28ddbc380eb66bc4b9a0bae9e931abb883498f3221baddd6678db37514dfa"},
@@ -3000,7 +3001,6 @@ files = [
     {file = "pyobjc_framework_mapkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:71095b1129411dcf78aa2ff61f9a00679e5eeb6826ff3ef665a6f23156f4c393"},
     {file = "pyobjc_framework_mapkit-12.2.tar.gz", hash = "sha256:65fdf104bd8a1d3e8965c689446b7e42a44ea4bc2da5c871ff389ef7a14ee030"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"13.0\"", dev = "platform_release >= \"13.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3014,12 +3014,12 @@ version = "12.2"
 description = "Wrappers for the framework MediaAccessibility on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"13.0\""
 files = [
     {file = "pyobjc_framework_mediaaccessibility-12.2-py2.py3-none-any.whl", hash = "sha256:2e1d023c738ef09ed57635ae277b3644a09d7313e6bb979ee1c6d68bae57e4a8"},
     {file = "pyobjc_framework_mediaaccessibility-12.2.tar.gz", hash = "sha256:9036a6412bce491b8ca477d4673b6e441cbf2cb2463d617f82bed818c5bde9d7"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"13.0\"", dev = "platform_release >= \"13.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3031,7 +3031,8 @@ version = "12.2"
 description = "Wrappers for the framework MediaExtension on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"24.0\""
 files = [
     {file = "pyobjc_framework_mediaextension-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:9eaa0b36fa2e4f43bdaf6783a18c16a0846966d41508b0571091d315c062af25"},
     {file = "pyobjc_framework_mediaextension-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:a30162449f24b360b70a27daeeb159c8c308f5bd0d812eac9bc4e7e1a47be20c"},
@@ -3044,7 +3045,6 @@ files = [
     {file = "pyobjc_framework_mediaextension-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:bf567e1768b696f554b93c1f850eba474014d079abe70e65bbe816ed69e833bc"},
     {file = "pyobjc_framework_mediaextension-12.2.tar.gz", hash = "sha256:9affa99bd94774ed91f3fc9f314468b4dc3bc6fc110ee8a81884d3947a9ced12"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"24.0\"", dev = "platform_release >= \"24.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3058,12 +3058,12 @@ version = "12.2"
 description = "Wrappers for the framework MediaLibrary on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"13.0\""
 files = [
     {file = "pyobjc_framework_medialibrary-12.2-py2.py3-none-any.whl", hash = "sha256:3bc97cb03e633a3f6f0a4e9d351210000100ebd1a4b19624c49c4e9bc7b5e574"},
     {file = "pyobjc_framework_medialibrary-12.2.tar.gz", hash = "sha256:9b65eb789cf10b20f2c5bc4d5f4e61e5feb02a43bc213ac3c03b647e30b96634"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"13.0\"", dev = "platform_release >= \"13.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3076,12 +3076,12 @@ version = "12.2"
 description = "Wrappers for the framework MediaPlayer on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"16.0\""
 files = [
     {file = "pyobjc_framework_mediaplayer-12.2-py2.py3-none-any.whl", hash = "sha256:436d3b410b84c7fa6577c4774faa4acc4bd3ca79f582b183e281ca63429a1574"},
     {file = "pyobjc_framework_mediaplayer-12.2.tar.gz", hash = "sha256:ee4f818a85e89a4c691e368b2709709d11658b81713fe367342af24dba2c5e62"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"16.0\"", dev = "platform_release >= \"16.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3093,7 +3093,8 @@ version = "12.2"
 description = "Wrappers for the framework MediaToolbox on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"13.0\""
 files = [
     {file = "pyobjc_framework_mediatoolbox-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:04d710cb762e3534af4adb77b63889b442abac664a8f729acca4f9e1a4876854"},
     {file = "pyobjc_framework_mediatoolbox-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:d381c72dd372abe15775d6c27deeb9260eb468bd12e3bf7928213f3ad6ab0c70"},
@@ -3106,7 +3107,6 @@ files = [
     {file = "pyobjc_framework_mediatoolbox-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:f3d541185086c7fc4df76da60c577be8fed06f8507ef35b44082167880476cdd"},
     {file = "pyobjc_framework_mediatoolbox-12.2.tar.gz", hash = "sha256:35fbaa7df491df5b756da1ad2035f0f04f72e556a560cdd9a6ef74ce315c555a"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"13.0\"", dev = "platform_release >= \"13.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3118,7 +3118,8 @@ version = "12.2"
 description = "Wrappers for the framework Metal on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_metal-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:d59ee2a3ff68367140e2a94ee3c52807defa016c2589e436f34796fea6c22405"},
     {file = "pyobjc_framework_metal-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:9fc402fc861b49c2ad59a2342ab0d65fbe206292ab6f127cb778e6e22483e544"},
@@ -3131,7 +3132,6 @@ files = [
     {file = "pyobjc_framework_metal-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:3d044801562c2a411ac65ff8f2f5d4004b3d1bd41082e8bb52b1f7a87ac53813"},
     {file = "pyobjc_framework_metal-12.2.tar.gz", hash = "sha256:4fb2cfd42cc8e808f08f1f2fe57de713734dd2f495c666296b2c8a5fba9be6dc"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3143,7 +3143,8 @@ version = "12.2"
 description = "Wrappers for the framework MetalFX on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_metalfx-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:18994e1478dd7360f2c5debb3c430dd81d5bf35edfa2b99a6a02dc31dfb77ca2"},
     {file = "pyobjc_framework_metalfx-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:83fabc9b784a29eb664e8f03042d8b5a612b6f0c7774e350b0be3c6dd99249d3"},
@@ -3156,7 +3157,6 @@ files = [
     {file = "pyobjc_framework_metalfx-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:8a7ab8fbfd7d54c0b362c7c568ba22e648a4981631001fb29cc93777e33330b9"},
     {file = "pyobjc_framework_metalfx-12.2.tar.gz", hash = "sha256:46774b9c938f2af40510a787be291dbc0c7e3778494704489e728fc349183244"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3168,7 +3168,8 @@ version = "12.2"
 description = "Wrappers for the framework MetalKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_metalkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:19f2fdf75ea46aedeb72b274410f5d4c93414fe540457fb6886ed694e9f1cb38"},
     {file = "pyobjc_framework_metalkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:b11b8decd36d242b748186d2d7d01f772f68652a7a06023757c62802cf68c70a"},
@@ -3181,7 +3182,6 @@ files = [
     {file = "pyobjc_framework_metalkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:5c0fe3df589ccc0bb07086f894457bab37fdc682bf7107bcb5bbeb2c93b0a8f6"},
     {file = "pyobjc_framework_metalkit-12.2.tar.gz", hash = "sha256:0f6379b74d64ce9cb864476caa277ab5010da3b0779b7fdc94af7da25f013a1a"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3194,7 +3194,8 @@ version = "12.2"
 description = "Wrappers for the framework MetalPerformanceShaders on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"17.0\""
 files = [
     {file = "pyobjc_framework_metalperformanceshaders-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:7dc079ed93521f250f4499774a986369f652e2431cb9d570420a7546a3d16f9c"},
     {file = "pyobjc_framework_metalperformanceshaders-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:0904f387b1f1a89b4baa15a370e7a0e2222f508bbb5ef7ad86575dc89d2833ca"},
@@ -3207,7 +3208,6 @@ files = [
     {file = "pyobjc_framework_metalperformanceshaders-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:df0768e6ff1e27b6963dbdd851fb771a72539f0357ac667dc9b91898ee77f0e2"},
     {file = "pyobjc_framework_metalperformanceshaders-12.2.tar.gz", hash = "sha256:f428f762bcf552f1a8f5533508ae4c73057a7f4f4a93bc997a921edec63b51e6"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"17.0\"", dev = "platform_release >= \"17.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3219,12 +3219,12 @@ version = "12.2"
 description = "Wrappers for the framework MetalPerformanceShadersGraph on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_metalperformanceshadersgraph-12.2-py2.py3-none-any.whl", hash = "sha256:e465d7717df4b000e3a529054cdf547e50e175f321b53c9520bcd6c69c08c837"},
     {file = "pyobjc_framework_metalperformanceshadersgraph-12.2.tar.gz", hash = "sha256:16249c5cd8d8403b5d81b871b618fdc0a8af0d7c81b461e733c0b5c1f9a9ef80"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3236,7 +3236,8 @@ version = "12.2"
 description = "Wrappers for the framework MetricKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"21.0\""
 files = [
     {file = "pyobjc_framework_metrickit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:23edc4fd09a6c08113374512d4249a329d701c43f6847bee74edea1141796a7f"},
     {file = "pyobjc_framework_metrickit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:e7f9c9b340538a03c73058bb6efa1fd3740b9b1765297e8bb8d613e7c5199eff"},
@@ -3249,7 +3250,6 @@ files = [
     {file = "pyobjc_framework_metrickit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:b788a3cf866474dc4569fc253a6c0f62eb02a3b0104e9b2e757da8629d550462"},
     {file = "pyobjc_framework_metrickit-12.2.tar.gz", hash = "sha256:c76cae82489813ca121de0ad6013555aa826f8742adf975028b3e4268ac51e6c"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"21.0\"", dev = "platform_release >= \"21.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3261,12 +3261,12 @@ version = "12.2"
 description = "Wrappers for the framework MLCompute on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_mlcompute-12.2-py2.py3-none-any.whl", hash = "sha256:18066ab867e02f5eb2cc66145b4274e6a7105e69165550356ec4a75937db1aae"},
     {file = "pyobjc_framework_mlcompute-12.2.tar.gz", hash = "sha256:7a2108c89ccae06e0fa03b1ef08c37bd9fae0ea0727d8b5890254bf44347eeac"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3278,7 +3278,8 @@ version = "12.2"
 description = "Wrappers for the framework ModelIO on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_modelio-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:c48e1c40813707b25e132c1bf8dc87aee3138e53eb448a54cddca23c934ba949"},
     {file = "pyobjc_framework_modelio-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:5aa6db571b6e2940e57a8229ea1e53e3174ca7847e6334231ff223037f0ee324"},
@@ -3291,7 +3292,6 @@ files = [
     {file = "pyobjc_framework_modelio-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:4e251c993b7dc123a436cc39802d272893a4c374796b3793d8f6cfd4f1c90f31"},
     {file = "pyobjc_framework_modelio-12.2.tar.gz", hash = "sha256:3f492868aa12c7107e456238fc718cac0316e8d95f7680b7465e41918d72db2f"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3304,7 +3304,8 @@ version = "12.2"
 description = "Wrappers for the framework MultipeerConnectivity on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"14.0\""
 files = [
     {file = "pyobjc_framework_multipeerconnectivity-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:6bf6a5a35f5079b7468013d4a26b9d726233f2c5ff350d83d68377254fa1eabd"},
     {file = "pyobjc_framework_multipeerconnectivity-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:ae86459ccccd087956f561507a17fbaf35e54c4cbe4d4088a8edc264c4dae1f3"},
@@ -3317,7 +3318,6 @@ files = [
     {file = "pyobjc_framework_multipeerconnectivity-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:c83025bca07a25bf416e960906375f66ff7fff2ea4411d1be13fd51dce32737f"},
     {file = "pyobjc_framework_multipeerconnectivity-12.2.tar.gz", hash = "sha256:7a5879cb83e9a7ea8c8d9e7e11ed3de4c9d67046e6c330b8a5f6332339f631a6"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"14.0\"", dev = "platform_release >= \"14.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3329,12 +3329,12 @@ version = "12.2"
 description = "Wrappers for the framework NaturalLanguage on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"18.0\""
 files = [
     {file = "pyobjc_framework_naturallanguage-12.2-py2.py3-none-any.whl", hash = "sha256:8c02a9ea25b888eefb0ac503211e17a9868a1781f5d5bf9c1655445abc14ffe2"},
     {file = "pyobjc_framework_naturallanguage-12.2.tar.gz", hash = "sha256:f6980ba957bb24501bbe135ffcdd0ff149f33d30e965f033ad153df756b33cc7"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"18.0\"", dev = "platform_release >= \"18.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3346,12 +3346,12 @@ version = "12.2"
 description = "Wrappers for the framework NetFS on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_netfs-12.2-py2.py3-none-any.whl", hash = "sha256:864d09a7b671f4407ff577739949c98ae8ba9b013433cf938fb0c86319151248"},
     {file = "pyobjc_framework_netfs-12.2.tar.gz", hash = "sha256:fdb04ecc91864a4b79498a07f4d34f33b5dcae34958d555f5cbd69e20165991d"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3363,7 +3363,8 @@ version = "12.2"
 description = "Wrappers for the framework Network on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"18.0\""
 files = [
     {file = "pyobjc_framework_network-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:65cf8a53729b2d063ed83849b1c945e1af4845397dd9d06f3073c112ce915cef"},
     {file = "pyobjc_framework_network-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:97748fd712c08cbe37adbb0e34ad67939c14e27d447022602c2f205b2d653fd5"},
@@ -3376,7 +3377,6 @@ files = [
     {file = "pyobjc_framework_network-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:2157c11fe921fb76af55364b7ca1e9f9679156b2cf2b7b18f1a1e2d25bc4502f"},
     {file = "pyobjc_framework_network-12.2.tar.gz", hash = "sha256:99d7a1900d8250d008eb285b20792d14076eedd665749cb0f48e1e102056207a"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"18.0\"", dev = "platform_release >= \"18.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3388,7 +3388,8 @@ version = "12.2"
 description = "Wrappers for the framework NetworkExtension on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_networkextension-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:3ccef4d217de41acfac3a707180d6460afaa41312f8d44593c13d2cf0cb0db8c"},
     {file = "pyobjc_framework_networkextension-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:bcb7cb7824ef8261337fbd1e98ccf8456982108e0883a82fbdfcc1ae429211a3"},
@@ -3401,7 +3402,6 @@ files = [
     {file = "pyobjc_framework_networkextension-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:faf4482e957bc76a78d3784ee5b010f9f562eb606118a6a3a30edd59f89f430a"},
     {file = "pyobjc_framework_networkextension-12.2.tar.gz", hash = "sha256:45bc3e7966cb9fce997832960d8aaf324a187f84019e65fc4432c27046715f70"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3413,7 +3413,8 @@ version = "12.2"
 description = "Wrappers for the framework NotificationCenter on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"14.0\""
 files = [
     {file = "pyobjc_framework_notificationcenter-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:687dc4faa1b1911d3de836bd85e5614d89aff6ca4270b9c486bf2ca8d5371e5d"},
     {file = "pyobjc_framework_notificationcenter-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:4f6031350c294b57670764f6cc8e37ec05555ac1f9154ccb6a60d12a103cff21"},
@@ -3426,7 +3427,6 @@ files = [
     {file = "pyobjc_framework_notificationcenter-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:7287b66979a21d94f132a4bdd2914f6e6d96823d7454c46841722b6d494ecd78"},
     {file = "pyobjc_framework_notificationcenter-12.2.tar.gz", hash = "sha256:d7a20fd67851d91db142765aa823a5c60c03c37957cea310a4eaad37640c085e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"14.0\"", dev = "platform_release >= \"14.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3438,12 +3438,12 @@ version = "12.2"
 description = "Wrappers for the framework OpenDirectory on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_opendirectory-12.2-py2.py3-none-any.whl", hash = "sha256:71d17cc1be29dd2ac50ae76fd654d233bed3b117854bf0ace021d8242a5a5566"},
     {file = "pyobjc_framework_opendirectory-12.2.tar.gz", hash = "sha256:e9edbe26c4d9aa533f343264d34af96fbef958d0c3a833acd2d64cf0fdb138e7"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3455,12 +3455,12 @@ version = "12.2"
 description = "Wrappers for the framework OSAKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_osakit-12.2-py2.py3-none-any.whl", hash = "sha256:604f428b00a0b1da1f40fc8a78db96e08b23abc7d666545a0909cc6e7b5ca2fd"},
     {file = "pyobjc_framework_osakit-12.2.tar.gz", hash = "sha256:219efdbe36fa6bea1c780b28ad8a1b23ec4ca0ee9ad3cf040da192f883514b81"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3472,7 +3472,8 @@ version = "12.2"
 description = "Wrappers for the framework OSLog on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_oslog-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:7efafc8cd4700c9f48907f7f01e06ecfb91626735378a33d9ac1dff944297105"},
     {file = "pyobjc_framework_oslog-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:dfd0eceb469b156676fd0ae2265ab512c76c8b849a1544c99cee01f001bef05d"},
@@ -3485,7 +3486,6 @@ files = [
     {file = "pyobjc_framework_oslog-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:1bb0922c211b07f50022583ea54ea58cf651963982e325873c6813474c4f0ff0"},
     {file = "pyobjc_framework_oslog-12.2.tar.gz", hash = "sha256:c2213dbb3edff318c731b300509c69bd922ad102311042dddcd9de8287e50a83"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3499,7 +3499,8 @@ version = "12.2"
 description = "Wrappers for the framework PassKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_passkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:9f315f778c967fd89a7d2c33ba4ba887836b6a7bdc2b652755c46278e91fb304"},
     {file = "pyobjc_framework_passkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:c915d8688e3a83b90388797840fd4fc019c7d3a3d501b8d20efb7aa00e74fa0f"},
@@ -3512,7 +3513,6 @@ files = [
     {file = "pyobjc_framework_passkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:8bf020af75bc581438700af5d5cf170d18bac9be8cc953dab057846dbf95bd4d"},
     {file = "pyobjc_framework_passkit-12.2.tar.gz", hash = "sha256:14a9b37b290942e86633ac59f923195d0038ff0f746443d914dfd5858cba9eff"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3524,12 +3524,12 @@ version = "12.2"
 description = "Wrappers for the framework PencilKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_pencilkit-12.2-py2.py3-none-any.whl", hash = "sha256:aec57e9ebe2a875d4fc17c46ef16ffcee74ba7551dcd6d83207efb05c3377187"},
     {file = "pyobjc_framework_pencilkit-12.2.tar.gz", hash = "sha256:a224250d5bd8490e619792570bf2b03849b875757c076412ef83bddf58a3d2c5"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3541,12 +3541,12 @@ version = "12.2"
 description = "Wrappers for the framework PHASE on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"21.0\""
 files = [
     {file = "pyobjc_framework_phase-12.2-py2.py3-none-any.whl", hash = "sha256:e8b85d7b2743b61f8920ad044f7e8370de80e5a4ca4f85ff42b6047b04e5f821"},
     {file = "pyobjc_framework_phase-12.2.tar.gz", hash = "sha256:fc1ec192bf7aac2627425c5f1fdabc3df614d100d18a6273b25ec4593f257eca"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"21.0\"", dev = "platform_release >= \"21.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3558,7 +3558,8 @@ version = "12.2"
 description = "Wrappers for the framework Photos on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_photos-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:fc7898d31a348f981f48b79554e68099dfdb66028cb6d7800a210f130fb73f7b"},
     {file = "pyobjc_framework_photos-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:aad8fade39d1b5e61f04755f9490a812f491d437c88dbcd42875f3cfe87bd76a"},
@@ -3571,7 +3572,6 @@ files = [
     {file = "pyobjc_framework_photos-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:b82f8aaed4f43dd344b45c81f2a661b607443b5bd221fe612f948a7f9a71acfe"},
     {file = "pyobjc_framework_photos-12.2.tar.gz", hash = "sha256:126d2d2aa78ea0e704db807ee2c7f7b418d8a859a0cb8df6ee31e66fd371c2ab"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3583,7 +3583,8 @@ version = "12.2"
 description = "Wrappers for the framework PhotosUI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"15.0\""
 files = [
     {file = "pyobjc_framework_photosui-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:40d08f08072624e2ecaad4c58e5159d6f032815929faddf6716d1c1904265022"},
     {file = "pyobjc_framework_photosui-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:fc462882da9e12d1b9e426402be0cadd93665c0112a299fa3fab1db0516504b0"},
@@ -3596,7 +3597,6 @@ files = [
     {file = "pyobjc_framework_photosui-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:52f74cc40c1dc129e073331910b627bb53f457645ac1bd1802176cca23c49a1f"},
     {file = "pyobjc_framework_photosui-12.2.tar.gz", hash = "sha256:c85ebf27f523dca57fadf767a4d72739c760d7c7236f5e5c8fbe4f80e696c9fd"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"15.0\"", dev = "platform_release >= \"15.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3608,12 +3608,12 @@ version = "12.2"
 description = "Wrappers for the framework PreferencePanes on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_preferencepanes-12.2-py2.py3-none-any.whl", hash = "sha256:ccd142fb1d26f20e660651008fce1440f0abc1897bd5ffb5546cd77e89bb31a6"},
     {file = "pyobjc_framework_preferencepanes-12.2.tar.gz", hash = "sha256:4928aa6fb30b24af3aa7379125ceca91687e97b08715909689d549a0a73266d3"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3625,12 +3625,12 @@ version = "12.2"
 description = "Wrappers for the framework PubSub on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_release >= \"9.0\" and platform_release < \"18.0\" and platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_pubsub-12.2-py2.py3-none-any.whl", hash = "sha256:6c86fe05a425925b551fdc77019d3bf28a98b13c8d403d691a7f06851ae5f615"},
     {file = "pyobjc_framework_pubsub-12.2.tar.gz", hash = "sha256:50e26ac373a32e78c4cb0ded4d89c07c0c910181855c5887ba351a4c7c742e2d"},
 ]
-markers = {main = "platform_release >= \"9.0\" and platform_release < \"18.0\" and platform_system == \"Darwin\"", dev = "platform_release >= \"9.0\" and platform_release < \"18.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3642,7 +3642,8 @@ version = "12.2"
 description = "Wrappers for the framework PushKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_pushkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:acf9232e744c633fd77d87c9eae28077176f32a3086dc684568d50427e872016"},
     {file = "pyobjc_framework_pushkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:92d05e166222ddacc81aa3c5d80ebd60b84efbc6f1bcdec1ac7f0f07c2cee1f6"},
@@ -3655,7 +3656,6 @@ files = [
     {file = "pyobjc_framework_pushkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:3d943e4c56d5e2ac5652c8b4d62187235d401d00fddce28e06a2db857772460c"},
     {file = "pyobjc_framework_pushkit-12.2.tar.gz", hash = "sha256:8f6b6879920bf9650f2288adb0dc8f809a807825c29136b6492561712234b0b3"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3667,7 +3667,8 @@ version = "12.2"
 description = "Wrappers for the Quartz frameworks on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_quartz-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:96201eb37192fde3abac348adacfc2d4e8af4e76d42752664d1e515f1db5d929"},
     {file = "pyobjc_framework_quartz-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:2dec68f8d5b42030fb0f44bf1169a208318393f216a68048b4336649d877293a"},
@@ -3680,7 +3681,6 @@ files = [
     {file = "pyobjc_framework_quartz-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:359738c88b12427a30d73a3d202002ab910e31eebf6bee4550495ec8aa64a004"},
     {file = "pyobjc_framework_quartz-12.2.tar.gz", hash = "sha256:b343395d4790323b0376fe20c83ac468510ba19f65429323ca211708c939d107"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3692,12 +3692,12 @@ version = "12.2"
 description = "Wrappers for the framework QuickLookThumbnailing on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_quicklookthumbnailing-12.2-py2.py3-none-any.whl", hash = "sha256:a60bdc283a44a70ad7a12840010b76d42ffd580c4bffb630da3874b229d30a74"},
     {file = "pyobjc_framework_quicklookthumbnailing-12.2.tar.gz", hash = "sha256:b0104142f0eb950e849ea25f40c01715069e1bdb3de69949c1b4732c8f5c693f"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3710,7 +3710,8 @@ version = "12.2"
 description = "Wrappers for the framework ReplayKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_replaykit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:b09dab69900bcb31edec68aca369a131402c0f1bcf16c777eba68ef2b972a9e2"},
     {file = "pyobjc_framework_replaykit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:c35e2945e678b8b80e428783b71dbcb74c35eaf450159fd53ea42b027b3cdf39"},
@@ -3723,7 +3724,6 @@ files = [
     {file = "pyobjc_framework_replaykit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:95be424c8b99c0beaa068fe999c2cf31a449095b9f89fb56bff2a5961d1995e3"},
     {file = "pyobjc_framework_replaykit-12.2.tar.gz", hash = "sha256:f971842973fad039642a67e3432b864e8bed815228d67d07b52174fceadca86f"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3735,7 +3735,8 @@ version = "12.2"
 description = "Wrappers for the framework SafariServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"16.0\""
 files = [
     {file = "pyobjc_framework_safariservices-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:237710861b293fb9f28654b75e04c9364e3d27e926864d03072da842f5d56f01"},
     {file = "pyobjc_framework_safariservices-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:09f4baf9b5d95bde52d58f15127b21aeb388a556827e530257ea514cab58bf4d"},
@@ -3748,7 +3749,6 @@ files = [
     {file = "pyobjc_framework_safariservices-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:fad17d1e4f9a0a680cb9778c3aec4f31ebcf86ffbaa7f1850a368dd21b2075eb"},
     {file = "pyobjc_framework_safariservices-12.2.tar.gz", hash = "sha256:35f76589201c9857f36fcae027c79ae2719d4463e1bb35996f78de9f570a0a58"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"16.0\"", dev = "platform_release >= \"16.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3760,7 +3760,8 @@ version = "12.2"
 description = "Wrappers for the framework SafetyKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_safetykit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:9cfcb071eb57e10e94137dbc4dbc024999e496dd89162b46b086cc5dfa4836a5"},
     {file = "pyobjc_framework_safetykit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:3921cf98475557ab50ec05934f5bc603c1edc7a7b53f1c40da5a4d4dc767f40a"},
@@ -3773,7 +3774,6 @@ files = [
     {file = "pyobjc_framework_safetykit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:e65386962f80aa4f85d11ee4f0470c05348b8282493336ca3adf9bb8feade375"},
     {file = "pyobjc_framework_safetykit-12.2.tar.gz", hash = "sha256:3161c4cd35261615ea38e64bd1db9de19c66d18d4d350bbe7d4eb4f69207e256"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3786,7 +3786,8 @@ version = "12.2"
 description = "Wrappers for the framework SceneKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"11.0\""
 files = [
     {file = "pyobjc_framework_scenekit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:412dd99fb8d04ed37ffaaed62daad1fc31612b1f7203416bada0902aaf9df26a"},
     {file = "pyobjc_framework_scenekit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:c2c016de827a9e2869e9f837482bad5f1e21f5b2047a26a8bd3e9506c78d94a0"},
@@ -3799,7 +3800,6 @@ files = [
     {file = "pyobjc_framework_scenekit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:0b8b92b25f35889a7d05f350faf0986af2306430321e09a758469f043810cbf5"},
     {file = "pyobjc_framework_scenekit-12.2.tar.gz", hash = "sha256:de58706317e567d0a5f257f9a4a66fafa037c5c8ef79051c19066b42477e301f"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"11.0\"", dev = "platform_release >= \"11.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3812,7 +3812,8 @@ version = "12.2"
 description = "Wrappers for the framework ScreenCaptureKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"21.4\""
 files = [
     {file = "pyobjc_framework_screencapturekit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:bd9c0f36ae2321caacb20a73e0f6948ee88561a76dc0798da9e4ef7ec1337803"},
     {file = "pyobjc_framework_screencapturekit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:3f763dd8fafdad4960c7b4b75bbf015adc0d8bf78cf76db1d3f130145ac369e4"},
@@ -3825,7 +3826,6 @@ files = [
     {file = "pyobjc_framework_screencapturekit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:560e81da652b05b0d10b16a62eeefa5e10cb05fabcae455f1c75da55c952be32"},
     {file = "pyobjc_framework_screencapturekit-12.2.tar.gz", hash = "sha256:7f45f2e170b97dfde3e6c7d3b867ec3ec03caf3aac9259fde4ba0272d912b00e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"21.4\"", dev = "platform_release >= \"21.4\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3838,7 +3838,8 @@ version = "12.2"
 description = "Wrappers for the framework ScreenSaver on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_screensaver-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:9cdf2b759f0c630a5e3e9d022ee4ffec49c0fae8c4eb120f57b3a662827cfb5f"},
     {file = "pyobjc_framework_screensaver-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:4ad00c18fc710fb3ac2cc333415120ac8a98b9b6e86d791f16addccc4ba66ad0"},
@@ -3851,7 +3852,6 @@ files = [
     {file = "pyobjc_framework_screensaver-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:d5a32f11b57ca5d3399a9bb39c1f7eb76a5f303a008e82e6f022013aa6c7f4ae"},
     {file = "pyobjc_framework_screensaver-12.2.tar.gz", hash = "sha256:2aefc58e53b42c33d0d06b4c846147c7b15b065254c588bef0ce8871ccf6d9d7"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3863,12 +3863,12 @@ version = "12.2"
 description = "Wrappers for the framework ScreenTime on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_screentime-12.2-py2.py3-none-any.whl", hash = "sha256:ef463bf9cf66ab2679a6fdc3da0a51bca3050bee4ff7614ac714edaa13e36003"},
     {file = "pyobjc_framework_screentime-12.2.tar.gz", hash = "sha256:0f708bf1707f2db5c4d13397471bd13cb8c1516ea204d7c4cca8f448295caa4e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3880,7 +3880,8 @@ version = "12.2"
 description = "Wrappers for the framework ScriptingBridge on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"9.0\""
 files = [
     {file = "pyobjc_framework_scriptingbridge-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:e58d8fa7a5e51f354a07174356887b575556aee0394ce1a7c27d0c8c211e2ab8"},
     {file = "pyobjc_framework_scriptingbridge-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:6827941b343744cdb12b13b7af908a3f67b4016d56691719d42c09137637980f"},
@@ -3893,7 +3894,6 @@ files = [
     {file = "pyobjc_framework_scriptingbridge-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:31cf0969d00e61a2f783ca5865d9d650a4be0ad1afded93cd575125187285693"},
     {file = "pyobjc_framework_scriptingbridge-12.2.tar.gz", hash = "sha256:b1420622d923cfe6218904a6a997eae4984653d32554b16374690c347f8ab55d"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"9.0\"", dev = "platform_release >= \"9.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3905,12 +3905,12 @@ version = "12.2"
 description = "Wrappers for the framework SearchKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_searchkit-12.2-py2.py3-none-any.whl", hash = "sha256:eb004bbc4522e7e7a8ee3751539056e18c204fd591ac8a2ffa6a8146117ab3fe"},
     {file = "pyobjc_framework_searchkit-12.2.tar.gz", hash = "sha256:aec05c1fa302e11a8e1e737a67ed8ce2bf1e04e9e249796b3b923e90e7b07b9f"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3922,7 +3922,8 @@ version = "12.2"
 description = "Wrappers for the framework Security on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_security-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:ece714c9d18e7d8c4b8d1222133d7c3db52b2166b651e2ded57f77e99d59ae40"},
     {file = "pyobjc_framework_security-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:92c4814f722aa0673757ac50a46c4fa3b934e22da2acca6d57ecf346e744c5db"},
@@ -3935,7 +3936,6 @@ files = [
     {file = "pyobjc_framework_security-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:e1ffef0aff259884e728cdf4105610c462eeb7f9f624a670c24ca47cb4744eef"},
     {file = "pyobjc_framework_security-12.2.tar.gz", hash = "sha256:ef4d2d852a09360929e284c6f355964d84ac88b170207de1ac299fa1e1c33e40"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3947,12 +3947,12 @@ version = "12.2"
 description = "Wrappers for the framework SecurityFoundation on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_securityfoundation-12.2-py2.py3-none-any.whl", hash = "sha256:7e1c8307799cc819cf5891ed046b78eae4907e267592456688fe15f5892ec16f"},
     {file = "pyobjc_framework_securityfoundation-12.2.tar.gz", hash = "sha256:03d51d2945f4ceeb7f5fe60e28f9f18f9e96797152467d523d374f6f242eb89f"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3965,7 +3965,8 @@ version = "12.2"
 description = "Wrappers for the framework SecurityInterface on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_securityinterface-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:914aef1b76e4cb9b3abbc4b1c12c3621b26acb794d20107d9041cc0aa6b7aa9b"},
     {file = "pyobjc_framework_securityinterface-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:de3314104a883b2ac1da753fcb643a0e6dc03b49d65e8dce59fdcc291f49b3f2"},
@@ -3978,7 +3979,6 @@ files = [
     {file = "pyobjc_framework_securityinterface-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:b7cf4225eb732c473eccad19a14a0b11d3ad38e41bfd0bed0447bfbcc8fc339b"},
     {file = "pyobjc_framework_securityinterface-12.2.tar.gz", hash = "sha256:096ea141b84f5128d367f4a7800073c801200bde86a451c735708137a4f23183"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -3991,12 +3991,12 @@ version = "12.2"
 description = "Wrappers for the framework SecurityUI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"24.4\""
 files = [
     {file = "pyobjc_framework_securityui-12.2-py2.py3-none-any.whl", hash = "sha256:d6cc86e9c039e8a1ac0227947277fb2b46ca2b9f9bb1fb7f7b081a3717ac045e"},
     {file = "pyobjc_framework_securityui-12.2.tar.gz", hash = "sha256:9ce580490d7be95d7ef4b6cfdb9af80b62be486932a89aa402accc86596df934"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"24.4\"", dev = "platform_release >= \"24.4\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4009,12 +4009,12 @@ version = "12.2"
 description = "Wrappers for the framework SensitiveContentAnalysis on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"23.0\""
 files = [
     {file = "pyobjc_framework_sensitivecontentanalysis-12.2-py2.py3-none-any.whl", hash = "sha256:5beb7d718e6dea0b17c14560ebaa3474f7aa349e412f974573cfae84cd7121b7"},
     {file = "pyobjc_framework_sensitivecontentanalysis-12.2.tar.gz", hash = "sha256:796d6cd3696daa7ac9116b35e7b2d520e86b687a8433443b755db8fd0cdd8315"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"23.0\"", dev = "platform_release >= \"23.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4027,12 +4027,12 @@ version = "12.2"
 description = "Wrappers for the framework ServiceManagement on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"10.0\""
 files = [
     {file = "pyobjc_framework_servicemanagement-12.2-py2.py3-none-any.whl", hash = "sha256:fa8b9d3bcfd0d2e6feb0884f3a95fda9cd681baf0b0ca457ec3f611de9439f7f"},
     {file = "pyobjc_framework_servicemanagement-12.2.tar.gz", hash = "sha256:9c7b698f4354a36ad0448dccba57e724ac682a1276eef3971b8d85d7ac7a6488"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"10.0\"", dev = "platform_release >= \"10.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4044,7 +4044,8 @@ version = "12.2"
 description = "Wrappers for the framework SharedWithYou on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_sharedwithyou-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:63bf688cd265766ff2c518017ce26068d78f59b395c5382e6756c1329b9727a7"},
     {file = "pyobjc_framework_sharedwithyou-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:5b019d02a66a3087c43cbcaa43ca95e287ce478636d9b630e2c9518559dbceab"},
@@ -4057,7 +4058,6 @@ files = [
     {file = "pyobjc_framework_sharedwithyou-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:53b4e3b844c9d9f8105350ce49028702f7c4e03da01e63cfe39d325d6c853cf2"},
     {file = "pyobjc_framework_sharedwithyou-12.2.tar.gz", hash = "sha256:215aefe1baee8d31dce55b38bd653cdecf0a74dddcf89277d64fcb8d6beafb9d"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4069,7 +4069,8 @@ version = "12.2"
 description = "Wrappers for the framework SharedWithYouCore on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_sharedwithyoucore-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1cbe189c6143713a73d90333e0b2c06c19fe00fa01a038fffebd61b0e9876b3f"},
     {file = "pyobjc_framework_sharedwithyoucore-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:91240bf161f281ebc447389cbae1cce419922b7b90df406e8cdd25480fdd84a1"},
@@ -4082,7 +4083,6 @@ files = [
     {file = "pyobjc_framework_sharedwithyoucore-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:afe3582b4af25afa5bf94a6af3cd7cdfa3bc966f754502d3054c419754e67ca3"},
     {file = "pyobjc_framework_sharedwithyoucore-12.2.tar.gz", hash = "sha256:212bd551676cf0ae791eb8d7b5f6a4b10090e2d407721124d691e3020f709e51"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4094,7 +4094,8 @@ version = "12.2"
 description = "Wrappers for the framework ShazamKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"21.0\""
 files = [
     {file = "pyobjc_framework_shazamkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:b468eacd73768fff1d61663aac488ff218e1ead510d8255a469cecca649739dc"},
     {file = "pyobjc_framework_shazamkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:ce9c79b1f558f2804c819e0f0d933a50d3c217aa23478e7e4c7d8121e97c2548"},
@@ -4107,7 +4108,6 @@ files = [
     {file = "pyobjc_framework_shazamkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:c20fb1da41721b3818f4f1253f11d29b0f0568ab5b2c96724c6eecc74ce26bd0"},
     {file = "pyobjc_framework_shazamkit-12.2.tar.gz", hash = "sha256:9bfd2790b331b36ebdd9f80dab1fcc80b816ee19a1fb5ae981e5b4a8fb2e7084"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"21.0\"", dev = "platform_release >= \"21.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4119,12 +4119,12 @@ version = "12.2"
 description = "Wrappers for the framework Social on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_social-12.2-py2.py3-none-any.whl", hash = "sha256:d012f52721d694000b37999b2fed213332bf89e8a682f4d29656db4d8c6c7087"},
     {file = "pyobjc_framework_social-12.2.tar.gz", hash = "sha256:0f5e8c3e6bfd36f8c552b58b42d8d1ff4c8bf18c74776cdc3e830c272a904118"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4136,12 +4136,12 @@ version = "12.2"
 description = "Wrappers for the framework SoundAnalysis on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_soundanalysis-12.2-py2.py3-none-any.whl", hash = "sha256:d669deee79636bc6858e40039d5c9b4cca47af7b4cf042c787c52f39b5b5ab40"},
     {file = "pyobjc_framework_soundanalysis-12.2.tar.gz", hash = "sha256:37dee57e3f75121b690550601fc136e0931f3be56a87357cdfae7696886850fc"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4153,7 +4153,8 @@ version = "12.2"
 description = "Wrappers for the framework Speech on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_speech-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:68d2f2d756de46b3892d8eefb51b7674d28758394b8b1e5a866b7c0bcc7d22b5"},
     {file = "pyobjc_framework_speech-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:010596c5b5456a7b023e7638b90cde66fa404020905734f5bdfec1a319b358cb"},
@@ -4166,7 +4167,6 @@ files = [
     {file = "pyobjc_framework_speech-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:5dbd2321eb4a6d39e53143798b5b23388d975b4b7fb1cf0e91089a21c36286cb"},
     {file = "pyobjc_framework_speech-12.2.tar.gz", hash = "sha256:14058f3ab48e29a68de5925297754a8bc6157b60c17cb24b3e8560290769e9aa"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4178,7 +4178,8 @@ version = "12.2"
 description = "Wrappers for the framework SpriteKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"13.0\""
 files = [
     {file = "pyobjc_framework_spritekit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:45eeb82aca9dd5204cc3a326e5038ea71e49ddf761c7b5da077b550b0ed8ef67"},
     {file = "pyobjc_framework_spritekit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:a50917e755aa06394132d5a5151002373991f75d765049b133853641e89b3805"},
@@ -4191,7 +4192,6 @@ files = [
     {file = "pyobjc_framework_spritekit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:0bc636ce5448dbcfbb0306cec2eca6170b68c11a3041a671a52a1a6f5e127aea"},
     {file = "pyobjc_framework_spritekit-12.2.tar.gz", hash = "sha256:75e8fd8040f77c7585247004b9c59971de84cbcb707070f391c8508888750565"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"13.0\"", dev = "platform_release >= \"13.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4204,7 +4204,8 @@ version = "12.2"
 description = "Wrappers for the framework StoreKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"11.0\""
 files = [
     {file = "pyobjc_framework_storekit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:14521707869ee8176986e0d70964d92d4da8d3fb51604bb1457994bd8b83031f"},
     {file = "pyobjc_framework_storekit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:09664af8a888bcf52ad917b17e808317b826020dd690325327b8204b9086aafd"},
@@ -4217,7 +4218,6 @@ files = [
     {file = "pyobjc_framework_storekit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:6204fbbf29f01875cc6683999fc6f627dc6edf4bded6bed68583422ed0d847f4"},
     {file = "pyobjc_framework_storekit-12.2.tar.gz", hash = "sha256:f50699484da541b9d028503441bcb745eeff0becadc75556783aaf76b8764975"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"11.0\"", dev = "platform_release >= \"11.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4229,12 +4229,12 @@ version = "12.2"
 description = "Wrappers for the framework Symbols on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"23.0\""
 files = [
     {file = "pyobjc_framework_symbols-12.2-py2.py3-none-any.whl", hash = "sha256:abc83c18ef8733897667d0b4d79400e3c38828347985bcad4aaf40b0cd61c94a"},
     {file = "pyobjc_framework_symbols-12.2.tar.gz", hash = "sha256:06c00d97047ee79fad95f95380d308c6dc1200d688cf4adf954382d65f138b10"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"23.0\"", dev = "platform_release >= \"23.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4246,7 +4246,8 @@ version = "12.2"
 description = "Wrappers for the framework SyncServices on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_syncservices-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:ead2c76df0c3a60cf884272e24c18e1b36b5213c3c033f7af33900267bee57be"},
     {file = "pyobjc_framework_syncservices-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:99effb76631d7696e344c2828e586871f6b139f50706037695f77246d1b09446"},
@@ -4259,7 +4260,6 @@ files = [
     {file = "pyobjc_framework_syncservices-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:f80b37b92d409b22b9a63d67f45f75c91b14986b6939bf69a11a55497953c651"},
     {file = "pyobjc_framework_syncservices-12.2.tar.gz", hash = "sha256:354f7aab848d4f2ce055886a083d07be752ebedf5fe1dcb3cbedd489fd4bfa05"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4272,7 +4272,8 @@ version = "12.2"
 description = "Wrappers for the framework SystemConfiguration on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_systemconfiguration-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:c09e3d1e45c3c48aa23600004c78db3389610a89928765d44bb63a24695ee222"},
     {file = "pyobjc_framework_systemconfiguration-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:ec3c855574a463f9a0aab068d9c9016232652631f92275c51aaefd34ebee696d"},
@@ -4285,7 +4286,6 @@ files = [
     {file = "pyobjc_framework_systemconfiguration-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:6e54a0df0b04b09f0bd7665db7c4887750ac70d243acbc9b8bf146947796cc1e"},
     {file = "pyobjc_framework_systemconfiguration-12.2.tar.gz", hash = "sha256:017bb958c436b6aa90e04a99fe3fdce3787e8c1db80d165ff0071273bdbf242f"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4297,7 +4297,8 @@ version = "12.2"
 description = "Wrappers for the framework SystemExtensions on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"19.0\""
 files = [
     {file = "pyobjc_framework_systemextensions-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:7e2b56bd2e44c140ce8d23dc5a2ac411359112acd31778be0e05173b10938ad9"},
     {file = "pyobjc_framework_systemextensions-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:fd8f35950c2908dd020d47308f8dba3f3934e29520aa8bf8fb0f0a4bd206ffea"},
@@ -4310,7 +4311,6 @@ files = [
     {file = "pyobjc_framework_systemextensions-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:0cf56fa70539445d64c7582ad7ee7ea11f7f15d2f4ce24745d3123522bdae666"},
     {file = "pyobjc_framework_systemextensions-12.2.tar.gz", hash = "sha256:2ec1edcd9d12451ef74969eae546b4661514381d7d60221240560ca9a743f506"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"19.0\"", dev = "platform_release >= \"19.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4322,12 +4322,12 @@ version = "12.2"
 description = "Wrappers for the framework ThreadNetwork on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"22.0\""
 files = [
     {file = "pyobjc_framework_threadnetwork-12.2-py2.py3-none-any.whl", hash = "sha256:08c7a03e11c60dca7b3f219db744986b90b8797d61b6842e0c0bad192e723f48"},
     {file = "pyobjc_framework_threadnetwork-12.2.tar.gz", hash = "sha256:2d7df5938094e3aa93210a079ebf3e801a20c84a3b759573ddf05ec2c2cbf083"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"22.0\"", dev = "platform_release >= \"22.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4339,12 +4339,12 @@ version = "12.2"
 description = "Wrappers for the framework UniformTypeIdentifiers on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_uniformtypeidentifiers-12.2-py2.py3-none-any.whl", hash = "sha256:f140a378cfe6a8ca47ce3b04fd5a4c4bec1fcbedac8acc87e2c18985bb805203"},
     {file = "pyobjc_framework_uniformtypeidentifiers-12.2.tar.gz", hash = "sha256:19cc82f1bbf3bc0999597779711422f6c9d7340634d699ae64d9bc7c0d79f984"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4356,7 +4356,8 @@ version = "12.2"
 description = "Wrappers for the framework UserNotifications on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"18.0\""
 files = [
     {file = "pyobjc_framework_usernotifications-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:b1dac8eaa52624a1d26f90b47f9d0eeea15cd4180c559e54d66bbfc29277191b"},
     {file = "pyobjc_framework_usernotifications-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:495cbeec617a5ad270c1fd88b689b0516912615a8c849614dddf0a6e6e63e25b"},
@@ -4369,7 +4370,6 @@ files = [
     {file = "pyobjc_framework_usernotifications-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:1656cc4d2be411447196df1c8b63466000bfaccbf144ab97715ec42eecbd497f"},
     {file = "pyobjc_framework_usernotifications-12.2.tar.gz", hash = "sha256:b7773e84fe40e746f706055267ba2b1dc9e0a34e6575719f1e515354f72583a0"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"18.0\"", dev = "platform_release >= \"18.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4381,12 +4381,12 @@ version = "12.2"
 description = "Wrappers for the framework UserNotificationsUI on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_usernotificationsui-12.2-py2.py3-none-any.whl", hash = "sha256:a5d92117c2d18e2b6365f5e39daf45a68491a66ac9103b1bc94df43b8868c256"},
     {file = "pyobjc_framework_usernotificationsui-12.2.tar.gz", hash = "sha256:8c3298cddd27be794ad46a2783304b6fb1f0ad4d65933c34ba3e43e58ecdb406"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4399,12 +4399,12 @@ version = "12.2"
 description = "Wrappers for the framework VideoSubscriberAccount on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"18.0\""
 files = [
     {file = "pyobjc_framework_videosubscriberaccount-12.2-py2.py3-none-any.whl", hash = "sha256:b158b03e1432dc229fabc96451f5ac8db5ab228792354f0f26419a973777c700"},
     {file = "pyobjc_framework_videosubscriberaccount-12.2.tar.gz", hash = "sha256:821f5485545238fd997dc26aff8ab2c838b43d664a7ec6a030ba67b09c2b799d"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"18.0\"", dev = "platform_release >= \"18.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4416,7 +4416,8 @@ version = "12.2"
 description = "Wrappers for the framework VideoToolbox on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"12.0\""
 files = [
     {file = "pyobjc_framework_videotoolbox-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:0405b5eb003b7e80950514256317786d4671100b399bfb7f0bac6096ab5a0187"},
     {file = "pyobjc_framework_videotoolbox-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:bc68009e4043ee5591b0c64bb0b7f8730ac9fed163b7eb4b96cb0e854c3ce3ea"},
@@ -4429,7 +4430,6 @@ files = [
     {file = "pyobjc_framework_videotoolbox-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:f3a916bbaa8826e91f8ef9cd53564fd3be33135d92acdadfc7e85b49d3245c8d"},
     {file = "pyobjc_framework_videotoolbox-12.2.tar.gz", hash = "sha256:33d0838f706c771667b0be5737036d303b677bb243ba64df9ea2fa6860ea9f76"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"12.0\"", dev = "platform_release >= \"12.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4443,7 +4443,8 @@ version = "12.2"
 description = "Wrappers for the framework Virtualization on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"20.0\""
 files = [
     {file = "pyobjc_framework_virtualization-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:bfbe2c80ca1fea61f99321f3b082594a3aa48c7d9aa54ef6729b31e9ba55f956"},
     {file = "pyobjc_framework_virtualization-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:30e86b9821085fcd7a7acaa99623f091b4c8a7e6c2f1d940fe39be4b4489025d"},
@@ -4456,7 +4457,6 @@ files = [
     {file = "pyobjc_framework_virtualization-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:b3531955330c0bb91daffd28f161c9c481a4683c2ff17b944bf216126d3580c5"},
     {file = "pyobjc_framework_virtualization-12.2.tar.gz", hash = "sha256:021249f0cd72e4756dfba096bda0e9ebd9294ba7738f1bdbb2742e461ac5671e"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"20.0\"", dev = "platform_release >= \"20.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4468,7 +4468,8 @@ version = "12.2"
 description = "Wrappers for the framework Vision on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\" and platform_release >= \"17.0\""
 files = [
     {file = "pyobjc_framework_vision-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:ed1eed217d5c86bbc09e78b4a7f1b415116a722b55948aaf7862f555c103d771"},
     {file = "pyobjc_framework_vision-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:47274c6167434a20be81c3506b49414f85d946a528ff930622b8a6dd758b9b95"},
@@ -4481,7 +4482,6 @@ files = [
     {file = "pyobjc_framework_vision-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:3d9080e4882e292c2d3c0726127e516a5c7774e96faf199a2c74aafcc1b6aa60"},
     {file = "pyobjc_framework_vision-12.2.tar.gz", hash = "sha256:0e90244f98ede5ec16ac129ed4bbd7cf0ec07247bac6f06e9cb612db23a68a3b"},
 ]
-markers = {main = "platform_system == \"Darwin\" and platform_release >= \"17.0\"", dev = "platform_release >= \"17.0\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
@@ -4495,7 +4495,8 @@ version = "12.2"
 description = "Wrappers for the framework WebKit on macOS"
 optional = false
 python-versions = ">=3.10"
-groups = ["main", "dev"]
+groups = ["main"]
+markers = "platform_system == \"Darwin\""
 files = [
     {file = "pyobjc_framework_webkit-12.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:2b5343662bc2d03fce3dad516b71b06a23ca5c1fec92fb56a407f8fa2e09691e"},
     {file = "pyobjc_framework_webkit-12.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:a31e87a68bcff0d633f05105df4582fba6c85cae1e5e2529dec957e833bc63cc"},
@@ -4508,7 +4509,6 @@ files = [
     {file = "pyobjc_framework_webkit-12.2-cp315-cp315t-macosx_10_15_universal2.whl", hash = "sha256:e8895b2cbc8b5d4c1475a3094771d3b8e6dbbd19ec3200922b1cd91d649e8043"},
     {file = "pyobjc_framework_webkit-12.2.tar.gz", hash = "sha256:498353fe812006f7fe2829a679018fcff3ed2684aa31c08d8a8af929ee9283b6"},
 ]
-markers = {main = "platform_system == \"Darwin\""}
 
 [package.dependencies]
 pyobjc-core = ">=12.2"
