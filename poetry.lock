@@ -4705,14 +4705,14 @@ files = [
 
 [[package]]
 name = "speechrecognition"
-version = "3.16.1"
+version = "3.17.0"
 description = "Library for performing speech recognition, with support for several engines and APIs, online and offline."
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "speechrecognition-3.16.1-py3-none-any.whl", hash = "sha256:b27ee50422ecee9f6837faeaa2d0937c6ea6d7e1b9dbc00a90ebc0f745cceda9"},
-    {file = "speechrecognition-3.16.1.tar.gz", hash = "sha256:6e0e5a326825de99c20da129fd5536bdae899faafa137bea905403c7c8dd47ec"},
+    {file = "speechrecognition-3.17.0-py3-none-any.whl", hash = "sha256:754f2cd9d7fbeff5e05ad91b906350cb7983fd2ef82002d91e117ac44aa94efa"},
+    {file = "speechrecognition-3.17.0.tar.gz", hash = "sha256:bd7e609c2ebea1680e75fc5dfbd8b44388c316f134c8d44fa2a30c0f50b346be"},
 ]
 
 [package.dependencies]
@@ -4723,6 +4723,7 @@ typing-extensions = "*"
 [package.extras]
 assemblyai = ["requests"]
 audio = ["PyAudio (>=0.2.11)"]
+audio-split = ["librosa (>=0.10.2,<1.0)", "numpy (>=1.26.0)"]
 cohere-api = ["cohere (>=5.21.0)"]
 dev = ["mypy", "numpy", "pytest", "pytest-httpserver", "pytest-randomly", "respx", "types-requests"]
 faster-whisper = ["faster-whisper", "soundfile"]
